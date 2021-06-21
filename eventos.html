@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="icon" href="./assets/images/PETComp.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/eventos.css">
+</head>
+<body>
+  <header>
+    <div class="logos">
+      <a href="./index.html"><img src="./assets/images/PETComp.png" alt="Logo PETComp UFMA" class="pet-logo"></a>
+      <div class="divider"></div>
+      <img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo">
+    </div>
+    <nav id="nav-bar" class="overlay">
+      <img src="/assets/svg/close_black_24dp.svg" alt="" class="close-btn" onclick="closeMenu()">
+      <div class="overlay-content">
+        <ul>
+          <li>
+            <button>
+              <a href="./index.html">Início</a>
+            </button>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button onclick="DropdownSobre()" class="dropbtn">
+                Conheça o PETComp
+                <span class="material-icons">
+                  arrow_drop_down
+                </span>
+              </button>
+              <div id="dropdown-sobre" class="dropdown-content-sobre">
+                <a href="./sobre.html">PETComp</a>
+                <a href="./integrantes.html">Integrantes</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button><a href="./publicacoes.html">Publicações</a></button>
+          </li>
+          <li>
+            <button><a href="./noticias.html">Notícias</a></button>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button onclick="DropdownProdutos()" class="dropbtn">
+                Produtos
+                <span class="material-icons">
+                  arrow_drop_down
+                </span>
+              </button>
+              <div id="dropdown-produtos" class="dropdown-content-produtos">
+                <a href="./eventos.html">Eventos</a>
+                <a href="./produtos-podcomp.html">PodCast</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <img src="/assets/svg/menu_black_24dp.svg" alt="" class="open-btn" onclick="openMenu()">
+  </header>
+
+  
+  <div class="section-header">
+    <h2>Eventos</h2>
+  </div>
+
+
+
+
+<div class="noticias">
+  <div class="materia">
+    <img src="assets/images/eacomp.png">
+      <div class="textoMateria">
+        <h3>EAComp</h3>
+        <br>
+        <p>
+            O Encontro Acadêmico de Computação (EAComp) da UFMA é uma forma de receber novos alunos e familiarizá-los com o curso de Graduação de Ciência da Computação da UFMA apresentando as oportunidades dentro da graduação. O EAComp é organizado pelo Programa de Educação Tutorial do curso de Ciência da Computação (PETComp).
+        </p>
+        <br>
+        <button class="botao"><a href="https://pet-comp-ufma.github.io/EAComp_site/" target="_blank" style="text-decoration:none">Saiba mais</a></button>
+      </div>
+  </div>
+
+
+    <br>
+
+    <div class="materia">
+      <img src="assets/images/ercemapi.png">
+        <div class="textoMateria">
+          <h3>ERCEMAPI</h3>
+          <br>
+            <p>
+            A primeira edição da Escola Regional de Computação dos Estados do Ceará, Maranhão e Piauí (ERCEMAPI) ocorreu em 2007 e foi sediada em Fortaleza, CE. O evento busca promover a integração entre os três estados e tem como objetivo disseminar o conhecimento técnico e científico sobre temas e assuntos de vanguarda na área de Computação. As Escolas Regionais são eventos promovidos pela Sociedade Brasileira de Computação (SBC). A ERCEMAPI visa se consolidar como um evento de referência nos Estados do Maranhão, Ceará e Piauí e região. Além disso, o evento colabora e contribui com a consolidação dos Programas de Pós-Graduação da região.
+            </p>
+          <br>  
+          <button class="botao"><a href="https://pet-comp-ufma.github.io/ERCEMAPI_site/" target="_blank" style="text-decoration:none">Saiba mais</a></button>
+          
+        </div>
+    </div>
+      <br>
+    <div class="materia">
+      <img src="assets/images/eJim.png">
+        <div class="textoMateria">
+          <h3>JIM</h3>
+          <br>
+          <p>
+            A Jornada Informática do Maranhão (JIM) é um evento de caráter acadêmico e técnico-científico com o objetivo de propiciar um espaço de intercâmbio entre os diversos atores dos setores de Informática da região, apresentando e discutindo temas que abordam a aplicação da Computação para a solução de problemas do Estado do Maranhão, bem como as pesquisas em Informática realizadas nas instituições do estado, disponibilizando aos participantes a possibilidade de acesso a temas e discussões recentes na área, através de diversas atividades, como palestras, minicursos, painéis de discussão e apresentação de trabalhos científicos.</p>
+          <br>  
+          <button class="botao"><a href="https://pet-comp-ufma.github.io/jim_site/" target="_blank" style="text-decoration:none">Saiba mais</a></button>
+        </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    
+</div>
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="logos">
+        <img src="./assets/images/Logo Monocromática Branca.png" alt="Logo PETComp UFMA">
+        <img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo">
+      </div>
+    </div>
+    <div class="infos">
+      <ul>
+        <li><img src="./assets/svg/map icon.svg" alt=""><p>Av. dos Portugueses, 1966 - Vila Bacanga, São Luís - MA, 65080-805, CCET - Bloco X - Sala XXX</p></li>
+        <li><img src="./assets/svg/email icon.svg" alt=""><p>E-mail: petcomputacao.ufma@gmail.com</p></li>
+      </ul>
+    </div>
+    <div class="sociais">
+      <ul>
+        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="https://www.instagram.com/petcompufma/">@PetCompUfma</a></li>
+        <li><img src="./assets/svg/facebook icon.svg" alt=""><a href="/">@PetCompUfma</a></li>
+        <li><img src="./assets/svg/twitter icon.svg" alt=""><a href="https://twitter.com/petcompufma">@PetCompUfma</a></li>
+      </ul>
+    </div>
+    <div class="contato">
+      <img src="/assets/svg/comment icon.svg" alt=""><a href="/contato.html">Fale Conosco</a>
+    </div>
+  </footer>
+  <script src="/scripts/script.js"></script>
+</body>
+</html>
