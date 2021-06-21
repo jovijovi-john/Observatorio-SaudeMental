@@ -93,7 +93,6 @@
               <li><span class="bold-title">Tipo: </span> Livro</li>
               <li><span class="bold-title">Palavras-chave: </span> Cuidado, Saúde mental, Saúde Pública</li>
             </ul>
-            <p>Postado em <span class="bold-day">05 de Jun de 2021 às 15:45</span></p>
           </div>
         </article>
       </div>
@@ -101,35 +100,45 @@
       <aside>
         <div class="pesquisa">
           <div class="title">
-            <h2>(img) Pesquisar trabalhos</h2>
+            <h2>
+              <span class="material-icons">
+                search
+              </span> 
+              Pesquisar trabalhos
+            </h2>
             <div class="line"></div>
           </div>
           <form action="">
-            <input type="text" placeholder="falta um botão na direita">
+            <input type="search" placeholder="falta um botão na direita">
             <button type="submit"></button>
           </form>
         </div>
         <div class="filtro">
           <div class="title">
-            <h2>(img) Filtrar Resultados </h2>
+            <h2>
+              <span class="material-icons">
+                filter_alt
+              </span>
+               Filtrar Resultados 
+              </h2>
             <div class="line"></div>
           </div>
           <div class="filtro-pesquisa">
             <form action="">
               <div class="input-box">
-                <input type="checkbox">
-                <input type="text" placeholder="Filtro por Autor">
+                <input type="radio" id="radio-button-author" onclick="checkAuthor()" ondblclick="uncheckAuthor()">
+                <input type="text" id="input-text-author" placeholder="Filtro por Autor" disabled>
               </div>
               <div class="input-box">
-                <input type="checkbox">
+                <input type="radio" id="radio-button-data">
                 <input type="text" placeholder="Filtro por Data de Publicação">
               </div>
               <div class="input-box">
-                <input type="checkbox">
+                <input type="radio" id="radio-button-keyword">
                 <input type="text" placeholder="Filtro por Palavras-Chave">
               </div>
               <div class="input-box">
-                <input type="checkbox">
+                <input type="radio" id="radio-button-type">
                 <select name="" id="">
                   <option value="">Filtre por Tipo</option>
                   <option value="">Artigo</option>
@@ -143,7 +152,9 @@
                   <option value="">Documentos Institucionais</option>
                 </select>
               </div>
-              <button class="filter" type="submit">Filtro</button>
+              <button class="filter" type="submit">
+                <img src="./assets/svg/filter.svg" alt="">
+              </button>
             </form>
           </div>
         </div>
@@ -179,5 +190,20 @@
     </div>
   </footer>
   <script src="./scripts/script.js"></script>
+  
+  <script>
+    document.getElementById('input-text-author').style = "cursor: no-drop;";
+    
+    function checkAuthor() {
+      document.getElementById('radio-button-author').checked = true;
+      document.getElementById('input-text-author').disabled = false;
+      document.getElementById('input-text-author').style = "cursor: text;"
+    }
+    function uncheckAuthor() {
+      document.getElementById('radio-button-author').checked = false;
+      document.getElementById('input-text-author').disabled = true;
+      document.getElementById('input-text-author').style = "cursor: no-drop;"
+    }
+  </script>
 </body>
 </html>

@@ -78,7 +78,8 @@ aside {
   width: 25%;
 }
 
-aside .pesquisa .title h2{
+aside .pesquisa .title h2 {
+  display: flex;
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
 }
@@ -100,6 +101,7 @@ aside .filtro {
 }
 
 aside .filtro .title h2{
+  display: flex;
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
 }
@@ -127,8 +129,10 @@ aside .filtro-pesquisa .input-box input[type="text"] {
   font-size: 14px;
   height: 30px;
   margin-left: 10px;
+  outline: none;
   padding: 10px;
   width: 80%;
+  cursor: disabled;
 }
 
 aside .filtro-pesquisa .input-box select {
@@ -141,6 +145,7 @@ aside .filtro-pesquisa .input-box select {
   font-size: 14px;
   height: 30px;
   margin-left: 10px;
+  outline: none;
   padding-left: 5px;
   width: 80%;
 }
@@ -151,10 +156,22 @@ aside .filtro-pesquisa .input-box select > option {
 }
 
 aside .filtro-pesquisa button {
+  align-items: center;
   border: 1px solid #D7D7D7;
-  border-radius: 40%;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
   height: 40px;
+  justify-content: center;
   width: 60px;
+}
+
+aside .filtro-pesquisa button:hover {
+  opacity: .5;
+}
+
+aside .filtro-pesquisa button img {
+  width: 20px;
 }
 
 .line {
