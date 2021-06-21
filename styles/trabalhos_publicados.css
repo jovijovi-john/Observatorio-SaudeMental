@@ -1,0 +1,234 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.publicacoes {
+  width: 70%;
+}
+
+.publicacoes .title h2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+}
+
+.publicacoes article {
+  background: #fff;
+  box-shadow: 0px 1px 10px 1px #c5c5c55d;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.publicacoes img {
+  height: 180px;
+  width: 180px;
+}
+
+.publicacoes .trabalho-detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+
+.publicacoes .trabalho-detalhes h5 a {
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.publicacoes .trabalho-detalhes h5:hover {
+  text-decoration: underline;
+}
+
+.publicacoes .trabalho-detalhes ul {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.publicacoes .trabalho-detalhes ul li {
+  color: #212529;
+  margin: 20px 0;
+}
+
+.publicacoes .trabalho-detalhes p {
+  color: #919090;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -20px;
+}
+
+aside {
+  float: right;
+  height: 100%;
+  width: 25%;
+}
+
+aside .pesquisa .title h2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+}
+
+aside .pesquisa input {
+  border: none;
+  border-bottom: 2px solid #AEAEAE;
+  box-shadow: 0px 1px 10px 1px #c5c5c55d;
+  font-size: 16px;
+  height: 30px;
+  margin-top: 30px;
+  outline: none;
+  padding: 4px;
+  width: 100%;
+}
+
+aside .filtro {
+  margin-top: 20px;
+}
+
+aside .filtro .title h2{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+}
+
+aside .filtro-pesquisa {
+  box-shadow: 0px 1px 10px 1px #c5c5c55d;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+aside .filtro-pesquisa .input-box {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 20px 0;
+}
+
+aside .filtro-pesquisa .input-box input[type="text"] {
+  background: #FAFAFA;
+  border: none;
+  border-bottom: 2px solid #414141;
+  box-shadow: 0px 1px 10px 1px #8b8b8b5d;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+aside .filtro-pesquisa .input-box select {
+  background: #FAFAFA;
+  border: none;
+  border-bottom: 2px solid #414141;
+  color: #757575;
+  box-shadow: 0px 1px 10px 1px #8b8b8b5d;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  height: 30px;
+  margin-left: 10px;
+  padding-left: 5px;
+  width: 80%;
+}
+
+aside .filtro-pesquisa .input-box select > option {
+  border: none;
+  padding: 100px;
+}
+
+aside .filtro-pesquisa button {
+  border: 1px solid #D7D7D7;
+  border-radius: 40%;
+  height: 40px;
+  width: 60px;
+}
+
+.line {
+  background: #F1F1F1;
+  height: 2px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.bold-title {
+  font-weight: 700;
+}
+
+.bold-day {
+  color: #000;
+  font-weight: 400;
+}
+
+.new-version {
+  background: #fff;
+  box-shadow: 0px 1px 10px 1px #c5c5c55d;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+}
+
+.new-version img {
+  height: 150px;
+  width: 200px;
+}
+
+.new-version .trabalho-detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+
+.new-version .trabalho-detalhes h5 a{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.new-version .trabalho-detalhes ul {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.new-version .trabalho-detalhes ul li {
+  color: #212529;
+  margin: 20px 0;
+}
+
+.new-version .trabalho-detalhes p {
+  color: #919090;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -20px;
+}
+
+.bold-title {
+  font-weight: 700;
+}
+
+.bold-day {
+  color: #000;
+  font-weight: 400;
+}

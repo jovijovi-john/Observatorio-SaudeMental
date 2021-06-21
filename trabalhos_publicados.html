@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEXTERS</title>
+
+  <link rel="icon" href="./assets/images/LogoObservatório.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/trabalhos_publicados.css">
+</head>
+<body>
+
+  <header>
+    <div class="logos">
+      <a href="./index.html"><img src="./assets/images/Logo Secundária 1c.png" alt="Logo Dexters" class="dexters-logo"></a>
+      <div class="divider"></div>
+      <a href="https://portalpadrao.ufma.br/site" target="_blank"><img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo"></a>
+    </div>
+    <nav id="nav-bar" class="overlay">
+      <img src="./assets/svg/close-24px.svg" alt="" class="close-btn" onclick="closeMenu()">
+      <div class="overlay-content">
+        <ul>
+          <li>
+            <button>
+              <a href="./index.html">Início</a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./trabalhos_publicados.html">Trabalhos Publicados</a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./submeter_obra.html">Como submeter uma obra?</a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./sobre.html">Sobre nós</a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <img src="./assets/svg/menu-24px.svg" alt="" class="open-btn" onclick="openMenu()">
+  </header>
+
+  <main>
+    <div class="section-header"> <!-- para mudar a cor é so acessar essa clase em style.css -->
+      <h2>Trabalhos Publicados</h2>
+    </div>
+    
+    <section class="container">
+      <div class="publicacoes">
+        <div class="title">
+          <h2>Últimos Trabalhos</h2>
+          <div class="line"></div>
+        </div>
+        <article>
+          <img src="./assets/images/LogoObservatório.png" alt="">
+          <div class="trabalho-detalhes">
+            <h5>
+              <a href="">SAÚDE MENTAL: DESAFIOS DA PREVENÇÃO, DIAGNÓSTICO, TRATAMENTO E CUIDADO NA SOCIEDADE MODERNA</a>
+            </h5>
+            <ul>
+              <li><span class="bold-title">Autor: </span> Guilherme Barroso Langoni de Freitas; Guilherme Augusto G. Martins;</li>
+              <li><span class="bold-title">Data de publicação: </span> 01/01/2021</li>
+              <li><span class="bold-title">Tipo: </span> Livro</li>
+              <li><span class="bold-title">Palavras-chave: </span> Cuidado, Saúde mental, Saúde Pública</li>
+            </ul>
+            <p>Postado em <span class="bold-day">05 de Jun de 2021 às 15:45</span></p>
+          </div>
+        </article>
+  
+        <article class="new-version">
+          <img src="./assets/images/LogoObservatório.png" alt="">
+          <div class="trabalho-detalhes">
+            <h5>
+              <a href="">SAÚDE MENTAL: DESAFIOS DA PREVENÇÃO, DIAGNÓSTICO, TRATAMENTO E CUIDADO NA SOCIEDADE MODERNA</a>
+            </h5>
+            <ul>
+              <li><span class="bold-title">Autor: </span> Guilherme Barroso Langoni de Freitas; Guilherme Augusto G. Martins;</li>
+              <li><span class="bold-title">Data de publicação: </span> 01/01/2021</li>
+              <li><span class="bold-title">Tipo: </span> Livro</li>
+              <li><span class="bold-title">Palavras-chave: </span> Cuidado, Saúde mental, Saúde Pública</li>
+            </ul>
+            <p>Postado em <span class="bold-day">05 de Jun de 2021 às 15:45</span></p>
+          </div>
+        </article>
+      </div>
+
+      <aside>
+        <div class="pesquisa">
+          <div class="title">
+            <h2>(img) Pesquisar trabalhos</h2>
+            <div class="line"></div>
+          </div>
+          <form action="">
+            <input type="text" placeholder="falta um botão na direita">
+            <button type="submit"></button>
+          </form>
+        </div>
+        <div class="filtro">
+          <div class="title">
+            <h2>(img) Filtrar Resultados </h2>
+            <div class="line"></div>
+          </div>
+          <div class="filtro-pesquisa">
+            <form action="">
+              <div class="input-box">
+                <input type="checkbox">
+                <input type="text" placeholder="Filtro por Autor">
+              </div>
+              <div class="input-box">
+                <input type="checkbox">
+                <input type="text" placeholder="Filtro por Data de Publicação">
+              </div>
+              <div class="input-box">
+                <input type="checkbox">
+                <input type="text" placeholder="Filtro por Palavras-Chave">
+              </div>
+              <div class="input-box">
+                <input type="checkbox">
+                <select name="" id="">
+                  <option value="">Filtre por Tipo</option>
+                  <option value="">Artigo</option>
+                  <option value="">TCC Graduação</option>
+                  <option value="">TCC Especialização</option>
+                  <option value="">Dissertação Mestrado</option>
+                  <option value="">Tese Doutorado</option>
+                  <option value="">Livro</option>
+                  <option value="">Capítulo de Livro</option>
+                  <option value="">Produção Técnica</option>
+                  <option value="">Documentos Institucionais</option>
+                </select>
+              </div>
+              <button class="filter" type="submit">Filtro</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </section class="container">
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="logos">
+        <a href="./index.html"><img src="./assets/images/Logo principal brancoc.png" alt="Logo Dexters"></a>
+        <div class="divider"></div>
+        <div class="logos-secundarias">
+          <a href="https://portalpadrao.ufma.br/site" target="_blank"><img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo"></a>
+          <a href="https://sigaa.ufma.br/sigaa/public/departamento/portal.jsf?lc=pt_BR&id=998" target="_blank"><img src="./assets/images/deINF.png" alt="deINF Logo" class="deinf-logo" style="height: 50px; width: 125px;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="infos">
+      <ul>
+        <li><img src="./assets/svg/map icon.svg" alt=""><p>Av. dos Portugueses, 1966 - Vila Bacanga, São Luís - MA, 65080-805, CCET</p></li>
+        <li><img src="./assets/svg/email icon.svg" alt=""><p>dexters.ufma@gmail.com</p></li>
+      </ul>
+    </div>
+    <div class="sociais">
+      <ul>
+        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Dexters</a></li>
+        <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Dexters</a></li>
+      </ul>
+    </div>
+    <div class="contato">
+      <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
+    </div>
+  </footer>
+  <script src="./scripts/script.js"></script>
+</body>
+</html>

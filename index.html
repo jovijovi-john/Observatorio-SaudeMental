@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DEXTERS</title>
 
-  <link rel="icon" href="./assets/images/PETComp.png">
+  <link rel="icon" href="./assets/images/LogoObservatório.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,12 +18,12 @@
 
   <header>
     <div class="logos">
-      <a href="./index.html"><img src="./assets/images/PETComp.png" alt="Logo PETComp UFMA" class="pet-logo"></a>
+      <a href="./index.html"><img src="./assets/images/Logo Secundária 1c.png" alt="Logo Dexters" class="dexters-logo"></a>
       <div class="divider"></div>
-      <img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo">
+      <a href="https://portalpadrao.ufma.br/site" target="_blank"><img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo"></a>
     </div>
     <nav id="nav-bar" class="overlay">
-      <img src="/assets/svg/close_black_24dp.svg" alt="" class="close-btn" onclick="closeMenu()">
+      <img src="./assets/svg/close-24px.svg" alt="" class="close-btn" onclick="closeMenu()">
       <div class="overlay-content">
         <ul>
           <li>
@@ -32,111 +32,54 @@
             </button>
           </li>
           <li>
-            <div class="dropdown">
-              <button onclick="DropdownSobre()" class="dropbtn">
-                Conheça o PETComp
-                <span class="material-icons">
-                  arrow_drop_down
-                </span>
-              </button>
-              <div id="dropdown-sobre" class="dropdown-content-sobre">
-                <a href="./sobre.html">PETComp</a>
-                <a href="./integrantes.html">Integrantes</a>
-              </div>
-            </div>
+            <button>
+              <a href="./trabalhos_publicados.html">Trabalhos Publicados</a>
+            </button>
           </li>
           <li>
-            <button><a href="./publicacoes.html">Publicações</a></button>
+            <button>
+              <a href="./submeter_obra.html">Como submeter uma obra?</a>
+            </button>
           </li>
           <li>
-            <button><a href="./noticias.html">Notícias</a></button>
-          </li>
-          <li>
-            <div class="dropdown">
-              <button onclick="DropdownProdutos()" class="dropbtn">
-                Produtos
-                <span class="material-icons">
-                  arrow_drop_down
-                </span>
-              </button>
-              <div id="dropdown-produtos" class="dropdown-content-produtos">
-                <a href="./eventos.html">Eventos</a>
-                <a href="./produtos-podcomp.html">PodCast</a>
-              </div>
-            </div>
+            <button>
+              <a href="./sobre.html">Sobre nós</a>
+            </button>
           </li>
         </ul>
       </div>
     </nav>
-    <img src="/assets/svg/menu_black_24dp.svg" alt="" class="open-btn" onclick="openMenu()">
+    <img src="./assets/svg/menu-24px.svg" alt="" class="open-btn" onclick="openMenu()">
   </header>
 
   <main>
 
-    <section id="slider">
-      <ul class="slider-content">
-        <li class="slider-item fade">
-          <div class="texto-banner">
-            <div class="intro-noticia">
-              <h1>Seja bem-vindo ao novo site PETComp</h1>
-              <p>De cara nova e com muito mais informações!</p>
-              <a href="./integrantes.html">Conheça</a>
-            </div>
-          </div>
-        </li>
-        <li class="slider-item fade">
-          <div class="texto-banner">
-            <div class="intro-noticia">
-              <h1>Conheça nossa história</h1>
-              <p>O grupo existe desde 2007 e desenvolve atividades de Monitoria, Desenvolvimento e Pesquisas</p>
-              <a href="./sobre.html">Conheça</a>
-            </div>
-          </div>
-        </li>
-        <li class="slider-item fade">
-          <div class="texto-banner">
-            <div class="intro-noticia">
-              <h1>Seletivo 2021.1</h1>
-              <p>Veja a lista de integrantes do grupo e conheça os novos participantes</p>
-              <a href="./integrantes.html">Conheça</a>
-            </div>
-          </div>
-        </li>
-        <li class="slider-item fade">
-          <div class="texto-banner">
-            <div class="intro-noticia">
-              <h1>PodComp</h1>
-              <p>Acompanhe todos o episódios já lançados do nosso podcast</p>
-              <a href="./produtos-podcomp.html">Conheça</a>
-            </div>
-          </div>
-        </li>
-        <button class="preview">
-          <img src="./assets/svg/navigate_before-24px.svg" onclick="plusSlides(-1)" alt="">
-        </button>
-        <button class="next">
-          <img src="./assets/svg/navigate_next-24px.svg" onclick="plusSlides(1)" alt="">
-        </button>
-      </ul>
+    <section id="banner">
+      <div class="texto-banner">
+        <h3>DEXTERS um Espaço de Pesquisa e Inovação em Engenharia de Software</h3>
+        <p>O nosso objetivo é ser o melhor laboratório de Engenharia de Software do Brasil</p>
+        <a href="./sobre.html">Conheça</a>
+      </div>
+    </section>
 
     <section id="sobre">
-      <div class="resumo-petcomp">
+      <div class="resumo-dexters">
         <div class="images">
           <figure class="gallery__item gallery__item--1">
-            <img src="./assets/images/Marca PETComp.png" alt="Gallery image 1" class="gallery__img">
+            <img src="./assets/images/photo-4.jpg" alt="Gallery image 1" class="gallery__img">
           </figure>
           <figure class="gallery__item gallery__item--2">
-            <img src="./assets/images/PETComp.png" alt="Gallery image 2" class="gallery__img">
+            <img src="./assets/images/photo-2.jpg" alt="Gallery image 2" class="gallery__img">
           </figure>
           <figure class="gallery__item gallery__item--3">
-            <img src="./assets/images/PETComp.png" alt="Gallery image 3" class="gallery__img">
+            <img src="./assets/images/photo-1.jpg" alt="Gallery image 3" class="gallery__img">
           </figure>
           <figure class="gallery__item gallery__item--4">
-            <img src="./assets/images/Marca PETComp.png" alt="Gallery image 4" class="gallery__img">
+            <img src="./assets/images/photo-5.jpg" alt="Gallery image 4" class="gallery__img">
         </div>
-        <div class="text-petcomp">
-          <h1>Conheça o PETComp</h1>
-          <p>O Programa de Educação Tutorial de Ciência da Computação da UFMA foi criado em 1 de Setembro de 2007, tendo como tutor o Professor Alexandre César Muniz de Oliveira (Lattes), em 19 de Janeiro de 2016 o Professor Geraldo Braz Junior (Lattes) tornou-se o novo tutor do grupo. E após sua excelente gestão, em 2019 assume o Professor Luis Rivero (Lattes). O PET Computação já realizou diversas atividades de pesquisa, ensino e extensão. Dentre algumas das atividades podemos citar minicursos, Projetos de Extensão, como por exemplo, ensino de pensamento computacional, organiza o Encontro Acadêmico de Computação (EAComp), desenvolvimento de sistemas, entre outros.
+        <div class="text-dexters">
+          <h1>Conheça o <mark class="highlight">DEXTERS</mark></h1>
+          <p>Um Espaço para produção e desenvolvimento em Engenharia de Software, Sistema de Informação, Ensino de Computação, Modelagem de Sistemas Complexos e Interação Humano Computador de forma inovadora, localizado no Centro de Ciências Exatas e Tecnologias (CCET), Development and user EXperience of TEchnologies and Research in Software Lab (DEXTERS) está sob a coordenação do professor Luis Rivero.
           </p>
           <a href="./sobre.html">Veja Mais ></a>
         </div>
@@ -146,42 +89,39 @@
     <section id="atividades">
       <div class="atividades">
         <div class="atividades-desenvolvidas">
-          <h1>Atividades</h1>
+          <h1>Áreas de Atuação</h1>
+          <p>
+            O nosso laboratório trabalha com as mais diversas áreas dentro da Engenharia de Software 
+          </p>
         </div>
         <div class="images-atividades">
-          <div class="card-atividade">
+          <div class="card-atividade-1">
             <div class="texto">
-              <h3>Monitoria</h3>
+              <h3>Engenharia de Software</h3>
               <hr>
             </div>
           </div>
-          <div class="card-atividade">
+          <div class="card-atividade-2">
             <div class="texto">
-              <h3>Podcast</h3>
+              <h3>Modelagem de Sistemas Complexos</h3>
               <hr>
             </div>
           </div>
-          <div class="card-atividade">
+          <div class="card-atividade-3">
             <div class="texto">
-              <h3>Desenvolvimento Web e Mobile</h3>
+              <h3>Interação Humano Computador</h3>
               <hr>
             </div>
           </div>
-          <div class="card-atividade">
+          <div class="card-atividade-4">
             <div class="texto">
-              <h3>Organização de Eventos</h3>
+              <h3>Sistemas de Informação</h3>
               <hr>
             </div>
           </div>
-          <div class="card-atividade">
+          <div class="card-atividade-5">
             <div class="texto">
-              <h3>Ministração de Minicursos</h3>
-              <hr>
-            </div>
-          </div>
-          <div class="card-atividade">
-            <div class="texto">
-              <h3>Expressão Escrita</h3>
+              <h3>Ensino de Computação</h3>
               <hr>
             </div>
           </div>
@@ -193,25 +133,28 @@
   <footer>
     <div class="container">
       <div class="logos">
-        <img src="./assets/images/Logo Monocromática Branca.png" alt="Logo PETComp UFMA">
-        <img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo">
+        <a href="./index.html"><img src="./assets/images/Logo principal brancoc.png" alt="Logo Dexters"></a>
+        <div class="divider"></div>
+        <div class="logos-secundarias">
+          <a href="https://portalpadrao.ufma.br/site" target="_blank"><img src="./assets/images/UFMA.png" alt="Logo UFMA" class="ufma-logo"></a>
+          <a href="https://sigaa.ufma.br/sigaa/public/departamento/portal.jsf?lc=pt_BR&id=998" target="_blank"><img src="./assets/images/deINF.png" alt="deINF Logo" class="deinf-logo" style="height: 50px; width: 125px;"></a>
+        </div>
       </div>
     </div>
     <div class="infos">
       <ul>
-        <li><img src="./assets/svg/map icon.svg" alt=""><p>Av. dos Portugueses, 1966 - Vila Bacanga, São Luís - MA, 65080-805, CCET - Bloco X - Sala XXX</p></li>
-        <li><img src="./assets/svg/email icon.svg" alt=""><p>E-mail: petcomputacao.ufma@gmail.com</p></li>
+        <li><img src="./assets/svg/map icon.svg" alt=""><p>Av. dos Portugueses, 1966 - Vila Bacanga, São Luís - MA, 65080-805, CCET</p></li>
+        <li><img src="./assets/svg/email icon.svg" alt=""><p>dexters.ufma@gmail.com</p></li>
       </ul>
     </div>
     <div class="sociais">
       <ul>
-        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="https://www.instagram.com/petcompufma/">@PetCompUfma</a></li>
-        <li><img src="./assets/svg/facebook icon.svg" alt=""><a href="/">@PetCompUfma</a></li>
-        <li><img src="./assets/svg/twitter icon.svg" alt=""><a href="https://twitter.com/petcompufma">@PetCompUfma</a></li>
+        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Dexters</a></li>
+        <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Dexters</a></li>
       </ul>
     </div>
     <div class="contato">
-      <img src="/assets/svg/comment icon.svg" alt=""><a href="/contato.html">Fale Conosco</a>
+      <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
     </div>
   </footer>
   <script src="./scripts/script.js"></script>

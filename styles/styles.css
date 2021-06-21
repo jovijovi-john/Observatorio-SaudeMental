@@ -15,16 +15,14 @@ p {
 header {
   background: #fafafa;
   box-shadow: 2px -1px 20px 0px #e1e1e1;
+  display: flex;
+  justify-content: space-between;
   height: 100px;
   width: 100%;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 header .logos {
+  align-items: center;
   display: flex;
   justify-content: space-around;
   margin-left: 30px;
@@ -32,16 +30,20 @@ header .logos {
   width: 250px;
 }
 
-header .logos img, header .logos a .pet-logo {
-  height: 75px;
-  width: 75px;
+header .logos a .dexters-logo {
+  height: 100%;
+  width: 100%;
 }
 
-header .divider {
-  background: #343564;
-  height: 75%;
-  margin: auto;
-  width: 4px;
+header .logos .ufma-logo {
+  width: 70px;
+}
+
+header .logos .divider {
+  background: #F3D248;
+  height: 80%;
+  margin: 0 10px ;
+  width: 2px;
 }
 
 header nav {
@@ -72,11 +74,11 @@ header nav button {
 
 
 header nav button:hover {
-  background: #e1e1e1;
+  background: #575a5b6b;
 }
 
-header nav a {
-  color: #000;
+header nav a, header nav .dropbtn {
+  color: #6FA9B3;
   text-decoration: none;
 }
 
@@ -150,7 +152,7 @@ header .dropdown .show-dropdown-produto {
   display: block;
   width: 60px;
   height: 5px;
-  background: #343564;
+  background: #6FA9B3;
   bottom: 20px;
   left: calc(50% - 30px);
 }
@@ -163,13 +165,40 @@ header .dropdown .show-dropdown-produto {
   margin-bottom: 10px;
 }
 
+mark {
+  background: none;
+  color: #545457;
+  text-decoration: none;
+  
+  display: inline-block;
+  position: relative;
+}
+mark:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  background: #f3d14888;
+  transition: height 0.3s ease 0s;
+  z-index: 0;
+  width: 100%;
+}
+mark:hover:after { 
+  height: 10px; 
+  left: 0; 
+}
+
 /* FOOTER */
 
 footer {
   align-items: center;
-  background: #343564;
+  background: #545457;
   display: flex;
   justify-content: space-around;
+  height: auto;
+  padding: 20px 0;
   width: 100%;
 }
 
@@ -177,6 +206,8 @@ footer .container {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+  margin: 0;
+  width: 400px;
 }
 
 footer .sobre {
@@ -185,14 +216,33 @@ footer .sobre {
 }
 
 footer .logos {
-  margin: auto 0;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 footer .logos img {
-  height: 70px;
+  height: auto;
   margin: auto 10px;
-  width: 70px;
+  width: 100%;
+}
+
+footer .logos .divider {
+  background: #f3d14838;
+  height: 2px;
+  margin-bottom: 20px;
+}
+
+footer .logos-secundarias {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .logos-secundarias img, footer .logos-secundarias .temporario {
+  height: 75px;
+  width: 75px;
 }
 
 footer .infos {
@@ -207,10 +257,11 @@ footer .infos li {
   display: flex;
   margin: 14px 0;
   padding: 12px;
-  width: 200px;
 }
 
 footer .infos li p {
+  margin: 0;
+  margin-left: 10px;
   width: 400px;
 }
 
@@ -251,7 +302,7 @@ footer .sociais li a {
   margin-left: -20px;
   padding: 12px;
   text-decoration: none;
-  width: 300px;
+  width: 140px;
 }
 
 footer .sociais img {
@@ -277,10 +328,11 @@ footer .infos a {
 footer .contato {
   background: #6FA9FF;
   border-radius: 6px;
+  box-shadow: 0px 6px 10px 0px #252629;
   display: flex;
   justify-content: space-between;
   padding: 12px;
-  width: 150px;
+  width: 175px;
 }
 
 footer .contato img {
@@ -292,30 +344,32 @@ footer .contato a {
   text-decoration: none;
 }
 
+footer .contato a {
+  opacity: .8;
+}
 
 @media (max-width: 800px) {
 
   header {
-    height: auto;
+    height: 70px;
   }
 
   header .logos {
-    margin: 0;
+    margin: auto 0;
     margin-left: 10px;
-    width: 75px;
+    width: 100px;
   }
 
   header nav {
     margin: 0;
   }
-
+  
   header .logos .ufma-logo, header .divider {
     display: none;
   }
 
-  header .logos .pet-logo {
-    height: 50px;
-    width: 50px;
+  header .logos .dexters-logo {
+    width: 100%;
   }
 
   header .open-btn, header .close-btn {
@@ -334,8 +388,8 @@ footer .contato a {
   }
   
   .overlay {
-    background-color: #343564;
-    background-color: #343564f8;
+    background-color: #6FA9B3;
+    background-color: #6FA9B3f8;
     overflow-y: hidden;
     position: fixed;
     top: 0;
@@ -352,7 +406,7 @@ footer .contato a {
     text-align: center;
   }
 
-  .overlay a, .overlay button {
+  .overlay a, .overlay button, .overlay .dropbtn {
     display: flex;
 
     color: #fff;
@@ -392,6 +446,7 @@ footer .contato a {
   }
   
   .dropbtn {
+    color: #fff;
     display: flex;
     margin-left: 12px;
   }
@@ -404,8 +459,31 @@ footer .contato a {
     width: 100%;
   }
 
+  footer .container {
+    width: 100%;
+  }
+
   footer .container .logos {
     margin-bottom: 20px;
+  }
+
+  footer .container .logos a {
+    display: flex;
+  }
+
+
+  footer .container .logos img, footer .container .logos .divider {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  footer .container .logos .logos-secundarias {
+    margin: 10px auto;
+    width: 200px;
+  }
+  footer .container .logos .logos-secundarias img, footer .container .logos .logos-secundarias .temporario {
+    margin: 0 10px;
+    width: 75px;
   }
 
   footer .infos ul li {
