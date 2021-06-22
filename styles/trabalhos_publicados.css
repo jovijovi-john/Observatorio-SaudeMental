@@ -98,6 +98,17 @@ aside .pesquisa input {
   width: 100%;
 }
 
+aside .pesquisa form button {
+  background: #fafafa;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  top: 32.5px;
+  z-index: 998;
+}
+
 aside .filtro {
   margin-top: 20px;
 }
@@ -252,13 +263,45 @@ aside .filtro-pesquisa button img {
   font-weight: 400;
 }
 
-.pesquisa form button {
-  background: #fafafa;
-  border: none;
-  cursor: pointer;
-  float: right;
-  margin-right: 10px;
-  position: relative;
-  top: 32.5px;
-  z-index: 999;
+@media (max-width: 1100px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+  .publicacoes {
+    width: 100%;
+  }
+
+  .publicacoes article {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .publicacoes .title h2 {
+    margin-top: 20px;
+  }
+
+  .publicacoes .trabalho-detalhes h5 a {
+    margin-top: 20px;
+  }
+
+  .publicacoes img {
+    height: 300px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .publicacoes .trabalho-detalhes ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  aside {
+    width: 100%;
+  }
 }
