@@ -455,6 +455,7 @@ footer .contato a {
   footer .infos ul li {
     align-items: center;
     display: flex;
+    font-size: 12px;
     padding: 0;
     width: 300px;
   }
