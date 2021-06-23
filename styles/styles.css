@@ -329,8 +329,9 @@ footer .contato a {
     display: none;
   }
 
-  header .logos .dexters-logo {
-    width: 100%;
+  header .logos a .dexters-logo {
+    height: 50px;
+    width: 60%;
   }
 
   header .open-btn, header .close-btn {
@@ -444,7 +445,11 @@ footer .contato a {
   }
   footer .container .logos .logos-secundarias img, footer .container .logos .logos-secundarias .temporario {
     margin: 0 10px;
-    width: 75px;
+    width: 350px;
+  }
+
+  footer .container .ufma-logo {
+    width: 100%;
   }
 
   footer .infos ul li {
