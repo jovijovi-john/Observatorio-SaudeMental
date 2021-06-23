@@ -162,8 +162,9 @@ footer .sobre {
 }
 
 footer .logos {
+  background: rgba(255, 255, 255, 0.158);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
 }
 
@@ -174,25 +175,23 @@ footer .logos img {
 }
 
 footer .logos .logo-dexters-footer {
-  background: rgba(255, 255, 255, 0.158);
   display: block;
-  height: 170px;
   margin: 0 auto;
   margin-bottom: 5px;
   padding: 10px;
+  width: 200px;
 }
 
 footer .logos .ufma-logo {
-  height: 150px;
-  margin-top: -20px;
-  width: 100%;
+  height: 100px;
+  width: 200px;
 }
 
-footer .logos .divider {
-  background: #f3d14838;
-  height: 2px;
-  margin-bottom: 20px;
-}
+/* footer .logos .divider {
+  background: #ffcc00;
+  height: 90%;
+  width: 50px;
+} */
 
 footer .logos-secundarias {
   align-items: center;
@@ -426,6 +425,7 @@ footer .contato a {
   }
 
   footer .container .logos {
+    flex-direction: column;
     margin-bottom: 20px;
   }
 
