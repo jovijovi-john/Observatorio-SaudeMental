@@ -1,327 +1,160 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   margin: 0 auto;
-  width: 75%;
-}
-
-.publicacoes {
   width: 70%;
 }
 
-.publicacoes .title h2{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  margin-top: 20px;
+details {
+  margin: 20px 0;
 }
 
-.publicacoes article {
-  background: #fff;
-  box-shadow: 0px 1px 10px 1px #c5c5c55d;
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  margin: 30px auto;
-  padding: 20px;
-  width: 100%;
-}
-
-.publicacoes img {
-  height: 180px;
-  width: 180px;
-}
-
-.publicacoes .trabalho-detalhes {
+details summary {
+  background: #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 20px;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 14px;
 }
 
-.publicacoes .trabalho-detalhes h5 a {
-  color: #000;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
+details summary .nome {
+  display: flex;
+  justify-content: space-between;
+  color: #323236;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.publicacoes .trabalho-detalhes h5:hover {
-  text-decoration: underline;
+details summary span {
+  background: #3D3D79;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  height: fit-content;
+  padding: 8px;
 }
 
-.publicacoes .trabalho-detalhes ul {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  margin: 20px 0;
-  margin-left: 20px;
+details summary span:hover {
+  /* background: #B9B9D8; */
+  opacity: .7;
 }
 
-.publicacoes .trabalho-detalhes ul li {
-  color: #212529;
-  margin: 20px 0;
+details summary ul {
+  font-size: 14px;
+  list-style: none;
+  padding: 10px;
 }
 
-.publicacoes .trabalho-detalhes p {
-  color: #919090;
-  font-size: 12px;
-  font-weight: 300;
+details summary ul li {
+  padding: 2px;
+}
+
+details .detalhes {
+  background: #eee;
+  font-size: 14px;
   margin-top: -20px;
+  padding: 20px;
 }
 
-aside {
-  float: right;
-  height: 100%;
+details[open] > summary:first-of-type {
+  transition: .2s;
+}
+
+details .detalhes .resumo p {
+  color: #7a7a7a;
+  line-height: 16px;
+  padding: 6px;
+  text-align: justify;
+}
+
+details .detalhes .share {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+details .detalhes .btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
   width: 25%;
 }
 
-aside .pesquisa .title h2 {
-  display: flex;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-aside .pesquisa input {
+details .detalhes .btn-container button {
+  background: #3D3D79;
   border: none;
-  border-bottom: 2px solid #AEAEAE;
-  bottom: 20px;
-  box-shadow: 0px 1px 10px 1px #c5c5c55d;
-  font-size: 16px;
-  height: 30px;
-  margin-top: 35px;
-  outline: none;
-  padding: 4px;
-  position: relative;
-  width: 100%;
+  color: #fff;
+  cursor: copy;
+  font-weight: 800;
+  padding: 6px;
+  transition: .2s;
 }
 
-aside .pesquisa form button {
-  background: #fafafa;
-  border: none;
-  cursor: pointer;
-  float: right;
-  margin-right: 10px;
-  position: relative;
-  top: 35px;
-  z-index: 998;
+details .detalhes .btn-container button:hover {
+  opacity: .7;
 }
 
-aside .filtro {
-  margin-top: 20px;
-}
-
-aside .filtro .title h2{
-  display: flex;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
-}
-
-aside .filtro-pesquisa {
-  box-shadow: 0px 1px 10px 1px #c5c5c55d;
-  margin-top: 30px;
-  padding: 15px;
-}
-
-aside .filtro-pesquisa .input-box {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  margin: 20px 0;
-}
-
-aside .filtro-pesquisa .input-box input[type="text"] {
-  background: #FAFAFA;
-  border: none;
-  border-bottom: 2px solid #3D3D79;
-  box-shadow: 0px 1px 10px 1px #8b8b8b5d;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  height: 30px;
-  margin-left: 10px;
-  outline: none;
-  padding: 10px;
-  width: 80%;
-  cursor: disabled;
-}
-
-aside .filtro-pesquisa .input-box select {
-  background: #FAFAFA;
-  border: none;
-  border-bottom: 2px solid #3D3D79;
-  color: #757575;
-  box-shadow: 0px 1px 10px 1px #8b8b8b5d;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  height: 30px;
-  margin-left: 10px;
-  outline: none;
-  padding-left: 5px;
-  width: 80%;
-}
-
-aside .filtro-pesquisa .input-box select > option {
-  border: none;
-  padding: 100px;
-}
-
-aside .filtro-pesquisa button {
-  align-items: center;
-  border: 1px solid #D7D7D7;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  width: 60px;
-}
-
-aside .filtro-pesquisa button:hover {
-  opacity: .5;
-}
-
-aside .filtro-pesquisa button img {
-  width: 20px;
-}
-
-.line {
-  background: #F1F1F1;
-  height: 2px;
+details .detalhes .compartilhe {
   margin-top: 10px;
-  width: 100%;
+  width: 30%;
 }
 
-.bold-title {
-  font-weight: 700;
-}
-
-.bold-day {
-  color: #000;
-  font-weight: 400;
-}
-
-.publicacoes {
+details .detalhes .compartilhe .sociais {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px;
+  width: 60%;
 }
 
-.item {
-  background: #fff;
-  box-shadow: 0px 1px 10px 1px #c5c5c55d;
+details .detalhes .compartilhe .sociais img {
+  background: #3D3D79;
+  cursor: copy;
+  padding: 10px;
+  transition: .2s;
+  width: 40px;
+}
+
+details .detalhes .compartilhe .sociais button {
+  align-items: center;
+  background: #3D3D79;
+  border: none;
   display: flex;
-  flex-direction: row;
-  height: auto;
-  margin: 20px auto;
-  padding: 20px;
-  width: 90%;
+  cursor: copy;
+  transition: .2s;
 }
 
-.item {
-  display: flex;
-  flex-direction: row;  
+details .detalhes .compartilhe .sociais button:hover {
+  opacity: .7;
 }
 
-.new-version img {
-  height: 150px;
-  width: 200px;
-}
-
-.new-version .trabalho-detalhes {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 20px;
-}
-
-.new-version .trabalho-detalhes h5 a{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.new-version .trabalho-detalhes ul {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  list-style: none;
-  margin: 20px 0;
-}
-
-.new-version .trabalho-detalhes ul li {
-  color: #212529;
-  margin: 20px 0;
-}
-
-.new-version .trabalho-detalhes p {
-  color: #919090;
-  font-size: 12px;
-  font-weight: 300;
-  margin-top: -20px;
-}
-
-.bold-title {
-  font-weight: 700;
-}
-
-.bold-day {
-  color: #000;
-  font-weight: 400;
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .container {
-    display: flex;
-    flex-direction: column-reverse;
     width: 90%;
   }
 
-  .publicacoes {
-    width: 100%;
-  }
-
-  .publicacoes article {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .publicacoes .title h2 {
-    margin-top: 20px;
-  }
-
-  .publicacoes .trabalho-detalhes h5 a {
-    margin-top: 20px;
-  }
-
-  .publicacoes img {
-    height: 300px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .publicacoes .trabalho-detalhes ul {
+  details summary .nome{
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    font-size: 18px;
   }
 
-  .publicacoes .trabalho-detalhes ul li {
-    margin: 0;
+  details summary .nome span {
+    margin: 10px 0;
+    width: fit-content;
   }
 
-  .publicacoes .trabalho-detalhes p {
-    margin-top: 20px;
+  details summary .resumo {
+    font-size: 16px;
   }
 
-  aside {
+  details .detalhes .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    width: 100%;
+  }
+
+  details .detalhes .compartilhe {
+    margin-top: 10px;
     width: 100%;
   }
 }
