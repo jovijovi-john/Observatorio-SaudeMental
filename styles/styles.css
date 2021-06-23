@@ -97,7 +97,7 @@ header nav a, header nav .dropbtn {
   display: block;
   width: 60px;
   height: 5px;
-  background: #6FA9B3;
+  background: #3D3D79;
   bottom: 20px;
   left: calc(50% - 30px);
 }
