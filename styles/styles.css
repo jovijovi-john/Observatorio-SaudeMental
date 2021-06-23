@@ -32,11 +32,12 @@ header .logos {
 
 header .logos a .dexters-logo {
   height: 100%;
-  width: 100%;
+  width: 70px;
 }
 
 header .logos .ufma-logo {
-  width: 70px;
+  margin-left: -30px;
+  width: 100px;
 }
 
 header .logos .divider {
@@ -168,7 +169,21 @@ footer .logos {
 
 footer .logos img {
   height: auto;
-  margin: auto 10px;
+  margin: 10px auto;
+  width: 80%;
+}
+
+footer .logos .logo-dexters-footer {
+  background: rgba(255, 255, 255, 0.158);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+footer .logos .ufma-logo {
+  height: 150px;
+  margin-top: -20px;
   width: 100%;
 }
 

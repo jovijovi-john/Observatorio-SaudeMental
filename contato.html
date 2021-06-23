@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Observatório</title>
+  <title> Contato </title>
 
-  <link rel="icon" href="./assets/images/LogoObservatório.png">
+  <link rel="icon" href="./assets/images/PETComp.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/submeter_obra.css">
+  <link rel="stylesheet" href="./styles/contato.css">
 </head>
 <body>
-
   <header>
     <div class="logos">
       <a href="./index.html"><img src="./assets/images/LogoObservatório2.png" alt="Logo Dexters" class="dexters-logo"></a>
@@ -53,45 +52,25 @@
   </header>
 
   <main>
-    <div class="section-header"> <!-- para mudar a cor é so acessar essa clase em style.css -->
-      <h2>Submissão de Obras</h2>
-    </div>
-    <section class="container">
-      <img src="./assets/images/LogoObservatório.png" alt="">
-      <div class="texto">
-        <h3>Como submeter uma Obra?</h3>
-        <ul>
-          <li>Envie um e-mail para: atendimento@gesam.com.br</li>
-          <li>Com assunto: [SUBMISSÃO para Avaliação de Obra] (Título da obra).</li>
-          <li>No corpo do texto, preencha:</li>
-            <ul class="list-bold" style="list-style: circle;">
-              <li>Nome do Autor.</li>
-              <li>Resumo com até 200 palavras</li>
-              <li>Tipo da Obra (Artigo publicado, TCC, Dissertação, Tese, Livro, Capítulo de Livro, Produção Técnica e Documentos Institucionais).</li>
-              <li>Se artigo publicado: Informar o título da Revista e link para acesso do artigo.</li>
-              <li>Se Trabalho de Conclusão de Curso (TCC, Dissertação, Tese) informar a Instituição, Curso ou Programa e o ano da defesa.</li>
-              <li>Se Livro ou Capítulo de Livro, informar a editora e o ISBN.</li>
-              <li>Se Produção Técnica e Documentos Institucionais, informar características específicas da obra.</li>
-              <li>Palavras-Chave: 04.</li>
-            </ul>
-            <li>Anexe o <a href="" >termo de autorização para a publicação/divulgação de documento eletrônico</a> preenchido.</li>
-            <li>Anexe o Arquivo - PDF.</li>
-            <li>Pronto! Analisaremos sua obra e em breve entraremos em contato.</li>
-        </ul>
+    <section id="envio-mensagem">
+      <div class="section-header">
+        <h2>contato</h2>
       </div>
-    </section>
 
-    <section class="contato">
-      <h3>Entraremos em contato! <br> Mande uma mensagem para a gente.</h3>
-      <div class="box-contato">
-        <div class="input-nome-email">
-          <input type="name" placeholder="Nome">
-          <input type="email" placeholder="E-mail">
+      <div class="mensagem">
+        <div class="nome">
+          <input type="name" name="nome" id="" placeholder="Nome:*" class="nome">
         </div>
-        <input type="text-area" placeholder="Digite a mensagem">
+        <div class="telefone-email">
+          <input type="email" name="email" id="" placeholder="Email:*" class="email">
+          <input type="phone" name="telefone" id="" placeholder="Telefone:*" class="telefone">
+        </div>
+        <div class="texto-mensagem">
+          <input type="text" name="mensagem" id="" placeholder="Mensagem" class="input-mensagem">
+        </div>
       </div>
-      <button type="submit">Enviar</button>
     </section>
+    <button type="submit">Enviar</button>
   </main>
 
   <footer>
