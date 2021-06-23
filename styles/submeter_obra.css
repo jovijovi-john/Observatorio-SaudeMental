@@ -39,6 +39,7 @@ main .container ul .list-bold {
   font-weight: 700;
   margin-left: 40px;
   padding: 10px;
+  text-align: justify;
 }
 
 main .container ul li a {

@@ -311,6 +311,14 @@ aside .filtro-pesquisa button img {
     justify-content: left;
   }
 
+  .publicacoes .trabalho-detalhes ul li {
+    margin: 0;
+  }
+
+  .publicacoes .trabalho-detalhes p {
+    margin-top: 20px;
+  }
+
   aside {
     width: 100%;
   }

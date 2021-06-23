@@ -23,8 +23,12 @@
   width: 450px;
 }
 
+
+
+
+/* #3D3D79 #3E4095 #B9B9D8 */
 .texto-banner a {
-  background: #6FA8B2;
+  background: #3D3D79;
   border-radius: 6px;
   color: #fff;
   padding: 14px;
@@ -32,7 +36,7 @@
 }
 
 .texto-banner a:hover {
-  background: #71c0ce;
+  background: #B9B9D8;
 }
 
 #sobre {
@@ -110,7 +114,7 @@
 }
 
 .resumo-dexters .text-dexters a {
-  color: #0ADAFE;
+  color: #3E4095;
   text-decoration: none;
 }
 
@@ -120,10 +124,12 @@
 
 .resumo-dexters .images figure {
   box-shadow: 0px 15px 10px 4px #d4d4d4;
+  transition: .2s;
 }
 
 .resumo-dexters .images figure:hover {
-  transform: scale(1.02);
+  cursor: none;
+  transform: scale(1.05);
 }
 
 
@@ -186,7 +192,7 @@
 
 .atividades .images-atividades .card-atividade-1 {
   align-items: flex-end;
-  background: linear-gradient(270deg, rgba(243, 210, 72, 0.94) -0.05%, rgba(201, 197, 106, 0.959027) 29.89%, rgba(163, 185, 137, 0.976259) 52.65%, rgba(115, 170, 175, 0.997973) 71.11%, rgba(120, 172, 172, 0.99585) 90.79%, #6FA8B2 99.4%);
+  background: #3D3D79;
   border-radius: 4px;
   display: flex;
   height: 250px;
@@ -196,14 +202,14 @@
 }
 
 .atividades .images-atividades .card-atividade-1 .texto {
-  color: #545457;
+  color: #fafafa;
   font-size: 20px;
   width: 200px;
 }
 
 .atividades .images-atividades .card-atividade-2 {
   align-items: flex-end;
-  background: linear-gradient(90deg, #6FA8B2 26.43%, rgba(243, 210, 72, 0.94) 89.79%);
+  background: #3D3D79;
   border-radius: 4px;
   display: flex;
   height: 250px;
@@ -213,14 +219,14 @@
 }
 
 .atividades .images-atividades .card-atividade-2 .texto {
-  color: #545457;
+  color: #fafafa;
   font-size: 20px;
   width: 200px;
 }
 
 .atividades .images-atividades .card-atividade-3 {
   align-items: flex-end;
-  background: linear-gradient(270deg, rgba(243, 210, 72, 0.94) 5.96%, rgba(187, 193, 117, 0.965347) 32.62%, rgba(120, 172, 172, 0.99585) 70.4%, #6FA9B3 84.64%);
+  background: #3D3D79;
   border-radius: 4px;
   display: flex;
   height: 250px;
@@ -230,14 +236,14 @@
 }
 
 .atividades .images-atividades .card-atividade-3 .texto {
-  color: #545457;
+  color: #fafafa;
   font-size: 20px;
   width: 200px;
 }
 
 .atividades .images-atividades .card-atividade-4 {
   align-items: flex-end;
-  background: linear-gradient(233.07deg, #6FA9B3 21.5%, rgba(243, 210, 72, 0.94) 84.78%);
+  background: #3D3D79;
   border-radius: 4px;
   display: flex;
   height: 250px;
@@ -247,14 +253,14 @@
 }
 
 .atividades .images-atividades .card-atividade-4 .texto {
-  color: #545457;
+  color: #fafafa;
   font-size: 20px;
   width: 200px;
 }
 
 .atividades .images-atividades .card-atividade-5 {
   align-items: flex-end;
-  background: linear-gradient(306.66deg, #6FA9B3 21.24%, rgba(243, 210, 72, 0.94) 87.61%);
+  background: #3D3D79;
   border-radius: 4px;
   display: flex;
   height: 250px;
@@ -264,7 +270,7 @@
 }
 
 .atividades .images-atividades .card-atividade-5 .texto {
-  color: #545457;
+  color: #fafafa;
   font-size: 20px;
   width: 200px;
 }

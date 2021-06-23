@@ -125,7 +125,7 @@ mark:after {
   display: block;
   height: 4px;
   position: absolute;
-  background: #f3d14888;
+  background: #B9B9D888;
   transition: height 0.3s ease 0s;
   z-index: 0;
   width: 100%;
