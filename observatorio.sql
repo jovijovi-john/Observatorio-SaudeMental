@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Jun-2021 às 16:56
+-- Generation Time: 24-Jun-2021 às 16:59
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -42,6 +42,13 @@ CREATE TABLE `article` (
   `Palavras_chave` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `article`
+--
+
+INSERT INTO `article` (`idArticle`, `Title`, `Authors`, `Journal`, `Year`, `Volume`, `Number`, `Pages`, `Month`, `Data_Publicacao`, `Palavras_chave`) VALUES
+(1, '\"DOIDIÇA\" E DEPRESSÃO: AS CONCEPÇÕES DOS USUÁRIOS DA REDE DE ATENÇÃO INTEGRAL À SAÚDE MENTAL DE SOBRAL-CE', 'Costa, Maria Suely Alves', '', 2008, '', '', '', 'Jan', '01/01/2008', 'epressão, Doidice, S');
+
 -- --------------------------------------------------------
 
 --
@@ -63,6 +70,13 @@ CREATE TABLE `book` (
   `Data_Publicacao` varchar(30) DEFAULT NULL,
   `Palavras_chave` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `book`
+--
+
+INSERT INTO `book` (`idBook`, `Title`, `Authors`, `Publisher`, `Year`, `Volume`, `Number`, `Series`, `Edition`, `Month`, `Note`, `Data_Publicacao`, `Palavras_chave`) VALUES
+(1, 'SAÚDE MENTAL: DESAFIOS DA PREVENÇÃO, DIAGNÓSTICO, TRATAMENTO E CUIDADO NA SOCIEDADE MODERNA', 'Freitas, Guilherme Barroso Langoni and Martins, Guilherme Augusto G', 'Paraná: Editora Pasteur', 2021, '', '', '', '', 'Jan', '', '01/01/2021', 'Cuidado, Saúde mental, Saúde Pública.');
 
 -- --------------------------------------------------------
 
@@ -101,11 +115,19 @@ CREATE TABLE `mastersthesis` (
   `Title` varchar(300) NOT NULL,
   `Authors` varchar(300) NOT NULL,
   `School` varchar(300) NOT NULL,
-  `Adress` varchar(300) NOT NULL,
+  `Address` varchar(300) NOT NULL,
   `Year` int(11) NOT NULL,
   `Data_Publicacao` varchar(30) NOT NULL,
-  `Palavras-chave` varchar(150) NOT NULL
+  `Palavras_chave` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `mastersthesis`
+--
+
+INSERT INTO `mastersthesis` (`idMastersThesis`, `Title`, `Authors`, `School`, `Address`, `Year`, `Data_Publicacao`, `Palavras_chave`) VALUES
+(1, 'Tecnologia educativa digital para a promoção da saúde mental de adolescentes: Estudo de validação por especialistas', 'Farias, Quiteria Larissa Teodoro', 'Universidade Federal do Ceará, Sobral, CE, Brasil', '', 2021, '01/01/2021', 'Promoção da Saúde, Saúde do Adolescente, Saúde Mental'),
+(2, 'ATENÇÃO A SAÚDE MENTAL NO MUNICIPIO DE SOBRAL - CE', 'Quinderé, Paulo Henrique Dias', ' Universidade Estadual do Ceará, Fortaleza, CE, Brasil', '', 2008, '01/01/2008', 'Assistência em saúde mental , Níveis de atenção à saúde , Prestação integrada de cuidados de saúde');
 
 -- --------------------------------------------------------
 
@@ -141,6 +163,14 @@ CREATE TABLE `phdthesis` (
   `Data_Publicacao` varchar(30) DEFAULT NULL,
   `Palavras_chave` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `phdthesis`
+--
+
+INSERT INTO `phdthesis` (`idPhdthesis`, `Title`, `Authors`, `School`, `Year`, `Type`, `Data_Publicacao`, `Palavras_chave`) VALUES
+(1, 'EXPERIÊNCIAS DAS FAMÍLIAS COM USUÁRIOS ATENDIDOS NOS DISPOSITIVOS DE ATENÇÃO PSICOSSOCIAL', 'Barros, Márcia Maria Mont´Alverne', '', 2012, '', '09/12/2012', 'Família, Pesquisa qualitativa, Saúde Mental'),
+(2, 'TRABALHO E SAÚDE MENTAL EM PROFISSIONAIS DA ATENÇÃO BÁSICA: A  EXPERIÊNCIA DE SOBRAL, CEARÁ.', 'Farias, Mariana Ramalho', ' Universidade Estadual do Ceará, Fortaleza, CE, Brasil', 2015, '', '01/01/2015', 'Atenção Primária à Saúde, Saúde do Trabalhador, Saúde Mental');
 
 --
 -- Indexes for dumped tables
@@ -181,6 +211,16 @@ ALTER TABLE `misc`
 --
 ALTER TABLE `phdthesis`
   ADD PRIMARY KEY (`idPhdthesis`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mastersthesis`
+--
+ALTER TABLE `mastersthesis`
+  MODIFY `idMastersThesis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
