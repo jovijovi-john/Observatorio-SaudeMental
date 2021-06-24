@@ -37,7 +37,7 @@ header .logos a .dexters-logo {
 
 header .logos .ufma-logo {
   margin-left: -30px;
-  width: 100px;
+  width: 75px;
 }
 
 header .logos .divider {
@@ -140,11 +140,10 @@ mark:hover:after {
 
 footer {
   align-items: center;
-  background: #3D3D79;
+  background: #545457;
   display: flex;
   justify-content: space-around;
-  height: auto;
-  padding: 20px 0;
+  height: fit-content;
   width: 100%;
 }
 
@@ -162,28 +161,16 @@ footer .sobre {
 }
 
 footer .logos {
-  background: rgba(255, 255, 255, 0.158);
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
 footer .logos img {
-  height: auto;
-  margin: 10px auto;
-  width: 80%;
-}
-
-footer .logos .logo-dexters-footer {
   display: block;
   margin: 0 auto;
   margin-bottom: 5px;
   padding: 10px;
-  width: 200px;
-}
-
-footer .logos .ufma-logo {
-  height: 100px;
   width: 200px;
 }
 
@@ -194,13 +181,11 @@ footer .logos .ufma-logo {
 } */
 
 footer .logos-secundarias {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-footer .logos-secundarias img, footer .logos-secundarias .temporario {
+footer .logos-secundarias img, footer .logos-secundarias {
   height: 75px;
   width: 75px;
 }

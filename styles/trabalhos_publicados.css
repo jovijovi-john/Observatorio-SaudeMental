@@ -3,6 +3,89 @@
   width: 70%;
 }
 
+.container .pesquisa {
+  align-items: center;
+  background: #eee;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.container details summary input {
+  border: none;
+  height: 40px;
+  font-size: 20px;
+  outline: none;
+  padding: 10px;
+  width: 90%;
+}
+
+.container details summary button {
+  border: none;
+  background: #3D3D79;
+  transition: .2s ease-out;
+}
+
+.container details summary button:hover {
+  opacity: .7;
+}
+
+.container details summary button span {
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 4px;
+  transition: .2s ease-out;
+}
+
+.container details summary button span:hover {
+  opacity: .7;
+}
+
+.container details .filtro {
+  background: #eee;
+  padding: 13px;
+  width: 100%;
+}
+
+.container details .filtro input,
+.container details .filtro select {
+  border: none;
+  height: 30px;
+  font-size: 14px;
+  margin: 6px 0;
+  margin-left: 10px;
+  outline: none;
+  padding: 10px;
+}
+
+.container details .filtro select {
+  padding: 0;
+}
+
+.container details .filtro > div {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: fit-content;
+}
+
+.container details .filtro > div h5 {
+  color: #616161;
+  font-size: 16px;
+}
+
+.container details .btn-filter {
+  background: #3D3D79;
+  border: none;
+  color: #fff;
+  display: flex;
+  float: right;
+  padding: 4px;
+  position: relative;
+  bottom: 40px;
+}
+
 details {
   margin: 20px 0;
 }
@@ -31,6 +114,7 @@ details summary span {
   font-size: 16px;
   height: fit-content;
   padding: 8px;
+  transition: .2s ease-out;
 }
 
 details summary span:hover {
@@ -53,10 +137,6 @@ details .detalhes {
   font-size: 14px;
   margin-top: -20px;
   padding: 20px;
-}
-
-details[open] > summary:first-of-type {
-  transition: .2s;
 }
 
 details .detalhes .resumo p {
