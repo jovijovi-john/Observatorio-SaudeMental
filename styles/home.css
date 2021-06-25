@@ -1,11 +1,11 @@
 .texto-banner {
   align-items: center;
-  background-image: url(../assets/images/Background.png);
+  background-image: url(../assets/images/640px-Mental_Health_Message.jpg);
   background-repeat: round;
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 750px;
   justify-content: center;
   margin: 0;
   text-align: center;
