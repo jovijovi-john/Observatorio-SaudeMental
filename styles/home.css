@@ -1,11 +1,11 @@
 .texto-banner {
   align-items: center;
-  background-image: url(../assets/images/640px-Mental_Health_Message.jpg);
-  background-repeat: round;
-  color: #fff;
+  /* background-image: url(../assets/images/640px-Mental.png);
+  background-repeat: ; */
+  color: #000;
   display: flex;
   flex-direction: column;
-  height: 750px;
+  height: 700px;
   justify-content: center;
   margin: 0;
   text-align: center;
@@ -25,10 +25,10 @@
 
 .texto-banner a {
   background: #3D3D79;
-  border-radius: 6px;
   color: #fff;
   padding: 14px;
   text-decoration: none;
+  transition: .2s;
 }
 
 .texto-banner a:hover {
