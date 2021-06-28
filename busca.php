@@ -1,5 +1,11 @@
-  <?php
+<?php
     require_once('conexao.php');
+    if(!isset($_GET['pesquisa'])){
+        header("Location: trabalhos_publicados.php");
+    }
+
+    $pesquisa = "%".trim($_GET['pesquisa'])."%";
+
 ?>
 
 <!DOCTYPE html>
@@ -70,21 +76,21 @@
     <section class="container">
       <details>
         <summary>
-	  <form action="busca.php" method="GET">
+          <form action="busca.php" method="GET">
           <div class="header">
-            <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
-            <div class="btn-pesquisas">
-              <button>
+              <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
+              <div class="btn-pesquisas">
+                <button>
+                  <span class="material-icons">
+                    search
+                  </span>
+                </button>
                 <span class="material-icons">
-                  search
+                  manage_search
                 </span>
-              </button>
-              <span class="material-icons">
-                manage_search
-              </span>
-            </div>
+              </div>
           </div>
-	  </form>
+          </form>
         </summary>
         <form class="filtro">
           <div class="author">
@@ -125,7 +131,10 @@
        <?php
             mysqli_select_db($mysqli, $bd) or die("Could not select database");
 
-            $query = "SELECT * FROM trabalhos_publicados";
+            $query = "SELECT * FROM trabalhos_publicados as tp 
+                      INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
+                      GROUP BY tp.id_trabalho
+                      HAVING p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."'";
             $result = mysqli_query($mysqli, $query);
             $num_results = mysqli_num_rows($result);
 
@@ -197,32 +206,32 @@
       
   </main>
 
-<footer>
+  <footer>
     <div class="container">
       <div class="logos">
-        <a href="./index.html"><img src="./assets/images/LogoObservatórioBranca.png" alt=""></a>
+        <!-- <img src="./assets/images/LogoObservatórioBranca.png" alt=""> -->
         <div class="logos-secundarias">
-          <a href="http://saude.sobral.ce.gov.br/politicas-sobre-drogas"><img src="./assets/images/logo-coord-psds.png" alt=""></a>
-          <a href=""><img src="./assets/images/logo-gesam-sem-fundo.png" alt=""></a>
-          <a href="http://www.sobral.ce.gov.br"><img src="./assets/images/logo-sobral.png" alt=""></a>
-          <a href="http://www.uvanet.br"><img src="./assets/images/logo-uva-sem-texto.png" alt=""></a>
+          <!-- <img src="./assets/images/logo-uva-sem-texto.png" alt="">
+          <img src="./assets/images/logo-sobral.png" alt="">
+          <img src="./assets/images/logo-coord-psds.png" alt="">
+          <img src="./assets/images/logo-gesam.png" alt=""> -->
         </div>
       </div>
-      <div class="infos">
-        <ul>
-          <li><img src="./assets/svg/email icon.svg" alt=""><p>atendimento@observatoriodesaudemental.com.br</p></li>
-          <li><img src="./assets/svg/email icon.svg" alt=""><p>cpdsobral2017@gmail.com</p></li>
-        </ul>
-      </div>
-      <div class="sociais">
-        <ul>
-          <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
-          <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Observatório</a></li>
-        </ul>
-      </div>
-      <div class="contato">
-        <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
-      </div>
+    </div>
+    <div class="infos">
+      <ul>
+        <li><img src="./assets/svg/email icon.svg" alt=""><p>atendimento@observatoriodesaudemental.com.br</p></li>
+        <li><img src="./assets/svg/email icon.svg" alt=""><p>cpdsobral2017@gmail.com</p></li>
+      </ul>
+    </div>
+    <div class="sociais">
+      <ul>
+        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Dexters</a></li>
+        <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Dexters</a></li>
+      </ul>
+    </div>
+    <div class="contato">
+      <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
     </div>
   </footer>
   <script src="./scripts/script.js"></script>
