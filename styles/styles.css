@@ -391,6 +391,10 @@ footer .contato a {
     margin-left: 12px;
   }
 
+  footer {
+    padding: 40px 0;
+  }
+
   footer .container {
     width: 100%;
   }
@@ -428,6 +432,7 @@ footer .contato a {
   footer .sociais li {
     align-items: center;
     display: flex;
+    margin: 0;
     padding: 12px;
     width: fit-content;
   }
@@ -436,6 +441,7 @@ footer .contato a {
     align-items: center;
     display: flex;
     justify-content: center;
+    margin: 0;
     margin-left: 0px;
     padding: 12px;
     text-decoration: none;

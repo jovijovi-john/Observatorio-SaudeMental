@@ -1,7 +1,7 @@
 .texto-banner {
   align-items: center;
-  /* background-image: url(../assets/images/640px-Mental.png);
-  background-repeat: ; */
+  background-image: url(../assets/images/mental-health.jpg);
+  background-repeat: no-repeat;
   color: #000;
   display: flex;
   flex-direction: column;
