@@ -147,6 +147,7 @@ footer .container {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   margin: 0 auto;
   padding: 20px;
   width: 90%;
@@ -155,6 +156,8 @@ footer .container {
 footer .container .logos {
   align-items: center;
   display: flex;
+  margin: 0;
+  width: 30%;
 }
 
 footer .container .logos a {
@@ -175,8 +178,9 @@ footer .container .logos .logos-secundarias {
 footer .container .logos .logos-secundarias img {
   width: 100%;
 }
+
 footer .infos {
-  width: 300px;
+  width: 30%;
 }
 
 footer .infos ul {
@@ -214,6 +218,10 @@ footer .infos a {
   text-decoration: none;
 }
 
+footer .sociais {
+  width: 10%;
+}
+
 footer .sociais ul {
   list-style: none;
 }
@@ -229,13 +237,14 @@ footer .sociais li a {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-left: -20px;
+  margin-left: -10px;
   padding: 12px;
   text-decoration: none;
   width: 140px;
 }
 
 footer .sociais img {
+  margin: 0;
   width: 25px;
 }
 
@@ -382,56 +391,54 @@ footer .contato a {
     margin-left: 12px;
   }
 
-  /* footer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 20px;
-    width: 100%;
-  }
-
   footer .container {
     width: 100%;
+  }
+  footer .container {
+    flex-direction: column;
+    padding: 0;
   }
 
   footer .container .logos {
     flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  footer .container .logos a {
-    display: flex;
-  }
-
-
-  footer .container .logos img, footer .container .logos .divider {
-    margin: 0 auto;
-    width: 80%;
-  }
-
-  footer .container .logos .logos-secundarias {
-    margin: 10px auto;
-    width: 200px;
-  }
-  footer .container .logos .logos-secundarias img, footer .container .logos .logos-secundarias .temporario {
-    margin: 0 10px;
-    width: 350px;
-  }
-
-  footer .container .ufma-logo {
+    justify-content: center;
+    margin-top: 10px;
     width: 100%;
   }
 
-  footer .infos ul li {
-    align-items: center;
-    display: flex;
-    font-size: 12px;
-    padding: 0;
-    width: 300px;
+  footer .container .logos a {
+    margin: 0;
   }
 
-  footer .sociais ul li p {
-    margin: auto;
-    text-align: left;
-  } */
+  footer .infos {
+    width: 100%;
+  }
+
+  footer .infos li p {
+    font-size: 14px;
+    margin: 0;
+    margin-left: 6px;
+    width: fit-content;
+  }
+
+  footer .sociais {
+    width: 100%;
+  }
+  
+  footer .sociais li {
+    align-items: center;
+    display: flex;
+    padding: 12px;
+    width: fit-content;
+  }
+
+  footer .sociais li a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    padding: 12px;
+    text-decoration: none;
+    width: 140px;
+  }
 }

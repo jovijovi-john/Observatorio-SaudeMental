@@ -1,146 +1,31 @@
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.container img {
-  margin: 0 auto;
-  width: 500px;
-}
-
 main .container {
-  box-shadow: 0px 10px 10px 0px #c3c3c3;
-  margin: 20px auto;
-  padding: 40px;
+  margin: 0 auto;
+  padding: 20px;
   width: 60%;
 }
 
-main .container h3 {
-  font-size: 32px;
-  margin: 30px 0;
-  text-align: center;
-}
-
-main .container ul {
-  color: #6d6d6d;
-  font-size: 18px;
+main .container .regras {
   list-style: decimal;
-  margin-top: 20px;
 }
 
-main .container ul li {
-  padding: 10px;
+main .container .regras li {
+  padding: 8px 0
 }
 
-main .container ul .list-bold {
-  color: #000;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 40px;
-  padding: 10px;
-  text-align: justify;
+main .container .regras li::marker {
+  color: #3D3D79;
+  font-weight: 900;
 }
 
-main .container ul li a {
-  color: #000;
-  font-weight: 700;
-  text-decoration: underline;
-  text-transform: uppercase;
+main .container .regras li a {
+  color: #3D3D79;
 }
 
-main .contato {
-  box-shadow: 0px 10px 10px 0px #c3c3c3;
-  margin: 50px auto;
-  padding: 40px;
-  width: 40%;
+main .container .regras ul {
+  list-style: disc;
+  padding: 0 30px;
 }
 
-main .contato h3 {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-main .contato .box-contato {
-  margin-top: 30px;
-}
-
-main .contato .box-contato > input {
-  margin-top: 30px;
-  width: 100%;
-}
-
-main .contato .box-contato input{
-  border: none;
-  border-bottom: 2px solid #F1F1F1;
-  font-size: 16px;
-  padding-bottom: 10px;
-}
-
-main .contato .box-contato .input-nome-email {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-main .contato .box-contato .input-nome-email input {
-  width: 45%;
-}
-
-main .contato button {
-  background: #3D3D79;
-  border: none;
-  border-radius: 25px;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto;
-  margin-top: 40px;
-  font-size: 18px;
-  padding: 10px;
-  width: 100px;
-}
-
-main .contato button:hover {
-  opacity: .7;
-}
-
-@media (max-width: 800px) {
-  .container img {
-    margin: 0 auto;
-    width: 200px;
-  }
-
-  main .container ul {
-    color: #6d6d6d;
-    font-size: 16px;
-    list-style: decimal;
-    margin-top: 20px;
-  }
-
-  main .container ul li {
-    padding: 4px;
-  }
-
-  main .container ul .list-bold {
-    color: #000;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    margin-left: 20px;
-    /* padding: 10px; */
-  }
-
-  main .container {
-    box-shadow: 0px 10px 10px 0px #c3c3c3;
-    margin: 20px auto;
-    padding: 40px;
-    width: 90%;
-  }
-
-  main .contato {
-    box-shadow: 0px 10px 10px 0px #c3c3c3;
-    margin: 50px auto;
-    padding: 40px;
-    width: 90%;
-  }
+main .container .regras ul li::marker {
+  font-size: 20px;
 }
