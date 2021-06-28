@@ -181,9 +181,9 @@
             <div class="citation">
               <h3>Cite</h3>
               <div class="btn-container">
-                <button onclick="cite('<?php print_r($row['cite_abnt'])?>')">ABNT</button>
-                <button onclick="cite('<?php print_r($row['cite_apa'])?>')">APA</button>
-                <button onclick="cite('<?php print_r($row['cite_vancouver'])?>')">VANCOUVER</button>
+ 				<button onclick='cite(`<?php print_r(utf8_encode($row['cite_abnt']))?>`)'>ABNT</button>
+                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_apa']))?>`)'>APA</button>
+                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_vancouver']))?>`)'>VANCOUVER</button>
               </div>
             </div>
             <div class="compartilhe">
