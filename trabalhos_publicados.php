@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Observatório</title>
 
-  <link rel="icon" href="./assets/images/LogoObservatório.png">
+  <link rel="icon" href="./assets/images/LogoObservatorio.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,7 +28,7 @@
 
   <header>
     <div class="logos">
-      <a href="./index.html"><img src="./assets/images/LogoObservatório2.png" alt="Logo Dexters" class="dexters-logo"></a>
+      <a href="./index.html"><img src="./assets/images/LogoObservatorio2.png" alt="Logo Dexters" class="dexters-logo"></a>
       <div class="divider"></div>
       <a href="https://portalpadrao.ufma.br/site" target="_blank"><img src="./assets/images/logo-uva-sem-texto.png" alt="Logo UVA" class="ufma-logo"></a>
     </div>
@@ -136,13 +136,13 @@
       <details>
         <summary>
           <div class="nome">
-           <?php print_r($row['titulo']);?>
+           <?php print_r(utf8_encode($row['titulo']));?>
             <span>Detalhes</span>
           </div>
           <ul>
-            <li><b>Autor: </b> <?php print_r($row['autor']);?></li>
-            <li><b>Tipo: </b> <?php print_r($row['tipo']);?></li>
-            <li><b>Data de Publicação: </b><?php print_r($row['data_publicacao']);?></li>
+            <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
+            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
+            <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['data_publicacao']));?></li>
             <li><b>Palavras-chaves: </b> 
               <?php
                 $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
@@ -152,7 +152,7 @@
                 if($num_results_KeysWord > 0){
                   for($j=0;$j<$num_results_KeysWord;$j++){
                     $rowKeys = mysqli_fetch_array($keywordsresult);
-                    print_r($rowKeys['palavra_chave']);
+                    print_r(utf8_encode($rowKeys['palavra_chave']));
                     if($j != $num_results_KeysWord - 1){
                       print_r(", ");
                     }
@@ -166,15 +166,15 @@
         <div class="detalhes">
           <div class="resumo">
             <h3>Resumo</h3>
-            <p><?php print_r($row['res']);?></p>
+            <p><?php print_r(utf8_encode($row['res']));?></p>
           </div>
           <div class="share">
             <div class="citation">
               <h3>Cite</h3>
               <div class="btn-container">
-                <button onclick="cite('<?php print_r($row['cite_abnt'])?>')">ABNT</button>
-                <button onclick="cite('<?php print_r($row['cite_apa'])?>')">APA</button>
-                <button onclick="cite('<?php print_r($row['cite_vancouver'])?>')">VANCOUVER</button>
+                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_abnt']))?>`)'>ABNT</button>
+                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_apa']))?>`)'>APA</button>
+                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_vancouver']))?>`)'>VANCOUVER</button>
               </div>
             </div>
             <div class="compartilhe">
