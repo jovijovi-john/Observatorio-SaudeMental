@@ -1,5 +1,5 @@
 .container {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 70%;
 }
 
@@ -213,6 +213,36 @@ details .detalhes .compartilhe .sociais button:hover {
   opacity: .7;
 }
 
+.pagination {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.pagination .numbers {
+  display: flex;
+}
+
+.pagination .numbers div, .pagination .prev, .pagination .next {
+  background: #3D3D79;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 8px;
+}
+
+.pagination .numbers div:hover, .pagination .prev:hover, .pagination .next:hover {
+  background: #fff;
+  color: #3D3D79;
+}
+
+.pagination .numbers .active {
+  border: 1px solid #3D3D79;
+  background: #fff;
+  color: #3D3D79;
+}
 @media (max-width: 800px) {
   .container {
     width: 90%;
