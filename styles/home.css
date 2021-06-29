@@ -1,8 +1,8 @@
 .texto-banner {
   align-items: center;
-  /* background-image: url(../assets/images/640px-Mental.png);
-  background-repeat: ; */
-  color: #000;
+  background-image: url(../assets/images/photo-6.jpg);
+  background-size:cover;
+  color: #fff;
   display: flex;
   flex-direction: column;
   height: 700px;

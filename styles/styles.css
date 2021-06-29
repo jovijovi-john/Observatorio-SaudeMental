@@ -32,7 +32,7 @@ header .logos {
 
 header .logos a .dexters-logo {
   height: 100%;
-  width: 70px;
+  width: 65px;
 }
 
 header .logos .ufma-logo {
@@ -140,6 +140,7 @@ mark:hover:after {
 
 footer {
   background: #545457;
+  padding: 20px 0;
   width: 100%;
 }
 
@@ -149,7 +150,6 @@ footer .container {
   justify-content: space-between;
   flex-direction: row;
   margin: 0 auto;
-  padding: 20px;
   width: 90%;
 }
 
@@ -188,6 +188,7 @@ footer .infos ul {
 }
 
 footer .infos li {
+  align-items: center;
   display: flex;
   margin: 14px 0;
   padding: 12px;
@@ -225,26 +226,18 @@ footer .sociais {
 footer .sociais ul {
   list-style: none;
 }
-
 footer .sociais li {
   align-items: center;
+  color: #fff;
   display: flex;
-  padding: 12px;
-  width: 300px;
-}
-
-footer .sociais li a {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-left: -10px;
+  justify-content: left;
   padding: 12px;
   text-decoration: none;
-  width: 140px;
+  width: 165px;
 }
 
 footer .sociais img {
-  margin: 0;
+  margin-right: 10px;
   width: 25px;
 }
 
