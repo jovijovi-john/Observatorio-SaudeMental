@@ -23,9 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="stylesheet"
-          href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/trabalhos_publicados.css">
@@ -128,113 +126,130 @@
         </form>
       </details>
       <!-- START  -->
-       <?php
-            mysqli_select_db($mysqli, $bd) or die("Could not select database");
-
-            $query = "SELECT * FROM trabalhos_publicados as tp 
-                      INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
-                      GROUP BY tp.id_trabalho
-                      HAVING p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."'";
-            $result = mysqli_query($mysqli, $query);
-            $num_results = mysqli_num_rows($result);
-
-            if($num_results > 0) {
-                for($i=0; $i<$num_results; $i++) {
-                    $row = mysqli_fetch_array($result);
-        ?>
-      <details>
-        <summary>
-          <div class="nome">
-           <?php print_r(utf8_encode($row['titulo']));?>
-            <span>Detalhes</span>
-          </div>
-          <ul>
-            <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
-            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
-            <li><b>Data de Publicação: </b><?php utf8_encode(print_r($row['data_publicacao']));?></li>
-            <li><b>Palavras-chaves: </b> 
-              <?php
-                $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
-                $keywordsresult = mysqli_query($mysqli, $queryKey);
-                $num_results_KeysWord = mysqli_num_rows($keywordsresult);
       
-                if($num_results_KeysWord > 0){
-                  for($j=0;$j<$num_results_KeysWord;$j++){
-                    $rowKeys = mysqli_fetch_array($keywordsresult);
-                    print_r(utf8_encode($rowKeys['palavra_chave']));
-                    if($j != $num_results_KeysWord - 1){
-                      print_r(", ");
+      <section id="paginate">
+      <ul class="list" style="list-style: none;">  <!-- lista com cada li e cada li tem a box dentro-->
+          <?php
+              mysqli_select_db($mysqli, $bd) or die("Could not select database");
+  
+              $query = "SELECT * FROM trabalhos_publicados as tp 
+                        INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
+                        GROUP BY tp.id_trabalho
+                        HAVING p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."'";
+              $result = mysqli_query($mysqli, $query);
+              $num_results = mysqli_num_rows($result);
+  
+              if($num_results > 0) {
+                  for($i=0; $i<$num_results; $i++) {
+                      $row = mysqli_fetch_array($result);
+          ?>
+        <li class="item">
+        <details>
+          <summary>
+            <div class="nome">
+              <?php print_r($row['titulo']);?>
+              <span>Detalhes</span>
+            </div>
+            <ul>
+              <li><b>Autor: </b> <?php print_r($row['autor']);?></li>
+              <li><b>Tipo: </b> <?php print_r($row['tipo']);?></li>
+              <li><b>Data de Publicação: </b><?php print_r($row['data_publicacao']);?></li>
+              <li><b>Palavras-chaves: </b> 
+                <?php
+                  $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
+                  $keywordsresult = mysqli_query($mysqli, $queryKey);
+                  $num_results_KeysWord = mysqli_num_rows($keywordsresult);
+        
+                  if($num_results_KeysWord > 0){
+                    for($j=0;$j<$num_results_KeysWord;$j++){
+                      $rowKeys = mysqli_fetch_array($keywordsresult);
+                      print_r($rowKeys['palavra_chave']);
+                      if($j != $num_results_KeysWord - 1){
+                        print_r(", ");
+                      }
                     }
                   }
-                }
-              ?>
-
-            </li>
-          </ul>
-        </summary>
-        <div class="detalhes">
-          <div class="resumo">
-            <h3>Resumo</h3>
-            <p><?php print_r(utf8_encode($row['res']));?></p>
-          </div>
-          <div class="share">
-            <div class="citation">
-              <h3>Cite</h3>
-              <div class="btn-container">
- 				<button onclick='cite(`<?php print_r(utf8_encode($row['cite_abnt']))?>`)'>ABNT</button>
-                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_apa']))?>`)'>APA</button>
-                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_vancouver']))?>`)'>VANCOUVER</button>
+                ?>
+  
+              </li>
+            </ul>
+          </summary>
+          <div class="detalhes">
+            <div class="resumo">
+              <h3>Resumo</h3>
+              <p><?php print_r($row['res']);?></p>
+            </div>
+            <div class="share">
+              <div class="citation">
+                <h3>Cite</h3>
+                <div class="btn-container">
+                  <button onclick='cite(`<?php print_r($row['cite_abnt'])?>`)'>ABNT</button>
+                  <button onclick='cite(`<?php print_r($row['cite_apa'])?>`)'>APA</button>
+                  <button onclick='cite(`<?php print_r($row['cite_vancouver'])?>`)'>VANCOUVER</button>
+                </div>
+              </div>
+              <div class="compartilhe">
+                <h3>Compartilhe</h3>
+                <div class="sociais">
+                  <button><img src="./assets/svg/facebook icon.svg" alt=""></button>
+                  <button><img src="./assets/svg/twitter icon.svg" alt=""></button>
+                  <button><img src="./assets/svg/instagram icon.svg" alt=""></button>
+                </div>
               </div>
             </div>
-            <div class="compartilhe">
-              <h3>Compartilhe</h3>
-              <div class="sociais">
-                <button><img src="./assets/svg/facebook icon.svg" alt=""></button>
-                <button><img src="./assets/svg/twitter icon.svg" alt=""></button>
-                <button><img src="./assets/svg/instagram icon.svg" alt=""></button>
-              </div>
-            </div>
           </div>
-        </div>
-      </details>
-      <!-- END -->
-    <?php
+        </details>
+        </li>
+        <!-- END -->
+      <?php
+        }
       }
-    }
-    ?>
-    </section>
-      
-  </main>
+      ?>
+          </ul>
+        </section>
+  
+        <div class="pagination"> <!-- botões -->
+          <div class="prev"><</div>
+          <div class="numbers">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div" class="next">></div>
+        </div>
+      </section>
+    </main>
 
-  <footer>
+    <footer>
     <div class="container">
       <div class="logos">
-        <!-- <img src="./assets/images/LogoObservatórioBranca.png" alt=""> -->
+        <a href="./index.html"><img src="./assets/images/LogoObservatórioBranca.png" alt=""></a>
         <div class="logos-secundarias">
-          <!-- <img src="./assets/images/logo-uva-sem-texto.png" alt="">
-          <img src="./assets/images/logo-sobral.png" alt="">
-          <img src="./assets/images/logo-coord-psds.png" alt="">
-          <img src="./assets/images/logo-gesam.png" alt=""> -->
+          <a href="http://saude.sobral.ce.gov.br/politicas-sobre-drogas"><img src="./assets/images/logo-coord-psds.png" alt=""></a>
+          <a href=""><img src="./assets/images/logo-gesam-sem-fundo.png" alt=""></a>
+          <a href="http://www.sobral.ce.gov.br"><img src="./assets/images/logo-sobral.png" alt=""></a>
+          <a href="http://www.uvanet.br"><img src="./assets/images/logo-uva-sem-texto.png" alt=""></a>
         </div>
       </div>
-    </div>
-    <div class="infos">
-      <ul>
-        <li><img src="./assets/svg/email icon.svg" alt=""><p>atendimento@observatoriodesaudemental.com.br</p></li>
-        <li><img src="./assets/svg/email icon.svg" alt=""><p>cpdsobral2017@gmail.com</p></li>
-      </ul>
-    </div>
-    <div class="sociais">
-      <ul>
-        <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Dexters</a></li>
-        <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Dexters</a></li>
-      </ul>
-    </div>
-    <div class="contato">
-      <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
+      <div class="infos">
+        <ul>
+          <li><img src="./assets/svg/email icon.svg" alt=""><p>atendimento@observatoriodesaudemental.com.br</p></li>
+          <li><img src="./assets/svg/email icon.svg" alt=""><p>cpdsobral2017@gmail.com</p></li>
+        </ul>
+      </div>
+      <div class="sociais">
+        <ul>
+          <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
+          <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Observatório</a></li>
+        </ul>
+      </div>
+      <div class="contato">
+        <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
+      </div>
     </div>
   </footer>
   <script src="./scripts/script.js"></script>
+  <script src="./scripts/pagination.js"></script>
 
   <script type="text/javascript">
    function cite(str) {

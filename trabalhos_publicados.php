@@ -17,9 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="stylesheet"
-          href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/trabalhos_publicados.css">
@@ -122,6 +120,9 @@
         </form>
       </details>
       <!-- START  -->
+      
+    <section id="paginate">
+    <ul class="list" style="list-style: none;">  <!-- lista com cada li e cada li tem a box dentro-->
        <?php
             mysqli_select_db($mysqli, $bd) or die("Could not select database");
 
@@ -133,16 +134,17 @@
                 for($i=0; $i<$num_results; $i++) {
                     $row = mysqli_fetch_array($result);
         ?>
+      <li class="item">
       <details>
         <summary>
           <div class="nome">
-           <?php print_r(utf8_encode($row['titulo']));?>
+           <?php print_r($row['titulo']);?>
             <span>Detalhes</span>
           </div>
           <ul>
-            <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
-            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
-            <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['data_publicacao']));?></li>
+            <li><b>Autor: </b> <?php print_r($row['autor']);?></li>
+            <li><b>Tipo: </b> <?php print_r($row['tipo']);?></li>
+            <li><b>Data de Publicação: </b><?php print_r($row['data_publicacao']);?></li>
             <li><b>Palavras-chaves: </b> 
               <?php
                 $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
@@ -152,7 +154,7 @@
                 if($num_results_KeysWord > 0){
                   for($j=0;$j<$num_results_KeysWord;$j++){
                     $rowKeys = mysqli_fetch_array($keywordsresult);
-                    print_r(utf8_encode($rowKeys['palavra_chave']));
+                    print_r($rowKeys['palavra_chave']);
                     if($j != $num_results_KeysWord - 1){
                       print_r(", ");
                     }
@@ -166,15 +168,15 @@
         <div class="detalhes">
           <div class="resumo">
             <h3>Resumo</h3>
-            <p><?php print_r(utf8_encode($row['res']));?></p>
+            <p><?php print_r($row['res']);?></p>
           </div>
           <div class="share">
             <div class="citation">
               <h3>Cite</h3>
               <div class="btn-container">
-                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_abnt']))?>`)'>ABNT</button>
-                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_apa']))?>`)'>APA</button>
-                <button onclick='cite(`<?php print_r(utf8_encode($row['cite_vancouver']))?>`)'>VANCOUVER</button>
+                <button onclick='cite(`<?php print_r($row['cite_abnt'])?>`)'>ABNT</button>
+                <button onclick='cite(`<?php print_r($row['cite_apa'])?>`)'>APA</button>
+                <button onclick='cite(`<?php print_r($row['cite_vancouver'])?>`)'>VANCOUVER</button>
               </div>
             </div>
             <div class="compartilhe">
@@ -188,13 +190,25 @@
           </div>
         </div>
       </details>
+      </li>
       <!-- END -->
     <?php
       }
     }
     ?>
+        </ul>
+      </section>
+
+      <div class="pagination"> <!-- botões -->
+        <div class="prev"><</div>
+        <div class="numbers">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div" class="next">></div>
+      </div>
     </section>
-      
   </main>
 
 <footer>
