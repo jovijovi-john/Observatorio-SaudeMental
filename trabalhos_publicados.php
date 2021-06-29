@@ -226,6 +226,7 @@
     </div>
   </footer>
   <script src="./scripts/script.js"></script>
+  <script src="./scripts/pagination.js"></script>
 
   <script type="text/javascript">
    function cite(str) {
