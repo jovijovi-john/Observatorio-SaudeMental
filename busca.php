@@ -1,10 +1,35 @@
 <?php
     require_once('conexao.php');
-    if(!isset($_GET['pesquisa'])){
-        header("Location: trabalhos_publicados.php");
+
+    if(isset($_GET['pesquisa'])){
+      $pesquisa = "%".trim($_GET['pesquisa'])."%";
+    }else{
+      $pesquisa = null;
     }
 
-    $pesquisa = "%".trim($_GET['pesquisa'])."%";
+    if(isset($_GET['autor'])){
+      $autor = "%".trim($_GET['autor'])."%";
+    }else{
+      $autor = null;
+    }
+
+    if(isset($_GET['data'])){
+      $data = $_GET['data'];
+    }else{
+      $data = null;
+    }
+
+    if(isset($_GET['palavra-chave'])){
+      $palavra_chave = "%".trim($_GET['palavra-chave'])."%";
+    }else{
+      $palavra_chave = null;
+    }
+
+    if(isset($_GET['selection_tipo'])){
+      $tipo = "%".trim($_GET['selection_tipo'])."%";
+    }else{
+      $tipo = null;
+    }
 
 ?>
 
@@ -88,34 +113,33 @@
                 </span>
               </div>
           </div>
-          </form>
         </summary>
-        <form class="filtro">
+        <div class="filtro">
           <div class="author">
             <h5>Filtrar por Autor: </h5>
-            <input type="text" placeholder="Autor">
+            <input type="text" name="autor" placeholder="Autor">
           </div>
           <div class="author">
             <h5>Filtrar por Data: </h5>
-            <input type="date" placeholder=>
+            <input type="date" name="data" placeholder=>
           </div>
           <div class="author">
             <h5>Palavra-chave: </h5>
-            <input type="text" placeholder="Palavra-chave">
+            <input type="text" name="palavra-chave" placeholder="Palavra-chave">
           </div>
-          <div class="author">
+          <div class="author">  
             <h5>Tipo: </h5>
-            <select name="" id="">
-              <option value="">Tipo</option>
-              <option value="">Artigo</option>
-              <option value="">TCC Graduação</option>
-              <option value="">TCC Especialização</option>
-              <option value="">Dissertação Mestrado</option>
-              <option value="">Tese Doutorado</option>
-              <option value="">Livro</option>
-              <option value="">Capítulo de Livro</option>
-              <option value="">Produção Técnica</option>
-              <option value="">Documentos Institucionais</option>
+            <select name="selection_tipo" id="" value="Tipo">
+              <option value="Tipo">Tipo</option>
+              <option value="Artigo">Artigo</option>
+              <option value="TCC Graduação">TCC Graduação</option>
+              <option value="TCC Especialização">TCC Especialização</option>
+              <option value="Dissertação Mestrado">Dissertação Mestrado</option>
+              <option value="Tese Doutorado">Tese Doutorado</option>
+              <option value="Livro">Livro</option>
+              <option value="Capítulo de Livro">Capítulo de Livro</option>
+              <option value="Produção Técnica">Produção Técnica</option>
+              <option value="Documentos Institucionais">Documentos Institucionais</option>
             </select>
           </div>
           <button class="btn-filter">
@@ -123,6 +147,7 @@
               filter_alt
             </span>
           </button>
+          </div>
         </form>
       </details>
       <!-- START  -->
@@ -135,7 +160,21 @@
               $query = "SELECT * FROM trabalhos_publicados as tp 
                         INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
                         GROUP BY tp.id_trabalho
-                        HAVING p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."'";
+                        HAVING (p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."')";
+
+              if($autor!=null){
+                $query = $query." and tp.autor LIKE '".$autor."'";
+              }
+              if($data!=null){
+                $query = $query." and tp.data_publicacao > '".$data."'";
+              }
+              if($palavra_chave!=null){
+                //$query = $query." and tp.data_publicacao LIKE '".$palavra_chave."'";
+              }
+              if($tipo!="%Tipo%"){
+                $query = $query." and tp.tipo LIKE '".$tipo."'";
+              }
+
               $result = mysqli_query($mysqli, $query);
               $num_results = mysqli_num_rows($result);
   
@@ -203,8 +242,13 @@
         <!-- END -->
       <?php
         }
-      }
-      ?>
+      }else{ ?>
+      <li class="item">
+        <div class="nome">
+          <h3>Nenhum registro encontrado!</h3>
+        </div>
+      </div>
+        <?php } ?>
           </ul>
         </section>
   

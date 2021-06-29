@@ -68,48 +68,47 @@
     <section class="container">
       <details>
         <summary>
-	  <form action="busca.php" method="GET">
+          <form action="busca.php" method="GET">
           <div class="header">
-            <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
-            <div class="btn-pesquisas">
-              <button>
+              <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
+              <div class="btn-pesquisas">
+                <button>
+                  <span class="material-icons">
+                    search
+                  </span>
+                </button>
                 <span class="material-icons">
-                  search
+                  manage_search
                 </span>
-              </button>
-              <span class="material-icons">
-                manage_search
-              </span>
-            </div>
+              </div>
           </div>
-	  </form>
         </summary>
-        <form class="filtro">
+        <div class="filtro">
           <div class="author">
             <h5>Filtrar por Autor: </h5>
-            <input type="text" placeholder="Autor">
+            <input type="text" name="autor" placeholder="Autor">
           </div>
           <div class="author">
             <h5>Filtrar por Data: </h5>
-            <input type="date" placeholder=>
+            <input type="date" name="data" placeholder=>
           </div>
           <div class="author">
             <h5>Palavra-chave: </h5>
-            <input type="text" placeholder="Palavra-chave">
+            <input type="text" name="palavra-chave" placeholder="Palavra-chave">
           </div>
           <div class="author">
             <h5>Tipo: </h5>
-            <select name="" id="">
-              <option value="">Tipo</option>
-              <option value="">Artigo</option>
-              <option value="">TCC Graduação</option>
-              <option value="">TCC Especialização</option>
-              <option value="">Dissertação Mestrado</option>
-              <option value="">Tese Doutorado</option>
-              <option value="">Livro</option>
-              <option value="">Capítulo de Livro</option>
-              <option value="">Produção Técnica</option>
-              <option value="">Documentos Institucionais</option>
+            <select name="selection_tipo" id="" value="Tipo">
+              <option value="Tipo">Tipo</option>
+              <option value="Artigo">Artigo</option>
+              <option value="TCC Graduação">TCC Graduação</option>
+              <option value="TCC Especialização">TCC Especialização</option>
+              <option value="Dissertação Mestrado">Dissertação Mestrado</option>
+              <option value="Tese Doutorado">Tese Doutorado</option>
+              <option value="Livro">Livro</option>
+              <option value="Capítulo de Livro">Capítulo de Livro</option>
+              <option value="Produção Técnica">Produção Técnica</option>
+              <option value="Documentos Institucionais">Documentos Institucionais</option>
             </select>
           </div>
           <button class="btn-filter">
@@ -117,6 +116,7 @@
               filter_alt
             </span>
           </button>
+          </div>
         </form>
       </details>
       <!-- START  -->
