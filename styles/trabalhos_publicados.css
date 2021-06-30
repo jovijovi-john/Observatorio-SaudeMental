@@ -66,8 +66,19 @@
   padding: 10px;
 }
 
+.container details .filtro data {
+  background: #fff;
+}
+
 .container details .filtro select {
+  background: #fff;
+  border: none;
   padding: 0;
+}
+
+.container details .filtro select option {
+  border: none;
+  padding: 10px;
 }
 
 .container details .filtro > div {
