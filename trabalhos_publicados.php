@@ -138,13 +138,13 @@
       <details>
         <summary>
           <div class="nome">
-           <?php print_r($row['titulo']);?>
+           <?php print_r(utf8_encode($row['titulo']));?>
             <span>Detalhes</span>
           </div>
           <ul>
-            <li><b>Autor: </b> <?php print_r($row['autor']);?></li>
-            <li><b>Tipo: </b> <?php print_r($row['tipo']);?></li>
-            <li><b>Data de Publicação: </b><?php print_r($row['data_publicacao']);?></li>
+            <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
+            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
+            <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['data_publicacao']));?></li>
             <li><b>Palavras-chaves: </b> 
               <?php
                 $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
@@ -154,7 +154,7 @@
                 if($num_results_KeysWord > 0){
                   for($j=0;$j<$num_results_KeysWord;$j++){
                     $rowKeys = mysqli_fetch_array($keywordsresult);
-                    print_r($rowKeys['palavra_chave']);
+                    print_r(utf8_encode($rowKeys['palavra_chave']));
                     if($j != $num_results_KeysWord - 1){
                       print_r(", ");
                     }
@@ -168,7 +168,7 @@
         <div class="detalhes">
           <div class="resumo">
             <h3>Resumo</h3>
-            <p><?php print_r($row['res']);?></p>
+            <p><?php print_r(utf8_encode($row['res']));?></p>
           </div>
           <div class="share">
             <div class="citation">
@@ -231,7 +231,7 @@
       <div class="sociais">
         <ul>
           <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
-          <li><img src="./assets/svg/twitter icon.svg" alt="""><a href="/" target="_blank">@Observatório</a></li>
+          <li><img src="./assets/svg/twitter icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
         </ul>
       </div>
       <div class="contato">
