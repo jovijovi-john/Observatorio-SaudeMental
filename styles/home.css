@@ -1,7 +1,7 @@
 .texto-banner {
   align-items: center;
   background-image: url(../assets/images/photo-6.jpg);
-  background-size:cover;
+  background-size: cover;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -316,6 +316,8 @@
   }
 
   .texto-banner {
+    background-image: url(../assets/images/photo-10.jpg);
+    background-repeat: no-repeat;
     height: auto;
     text-align: center;
     padding: 50px 0;

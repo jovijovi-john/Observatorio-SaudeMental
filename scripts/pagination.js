@@ -7,7 +7,7 @@ const html = {
   }
 }
 
-let perPage = 6
+let perPage = 15
 const state = {
   page: 1,
   perPage,

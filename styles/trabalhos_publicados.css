@@ -216,8 +216,7 @@ details .detalhes .compartilhe .sociais button:hover {
 .pagination {
   align-items: center;
   display: flex;
-  margin: 0 auto;
-  width: 200px;
+  justify-content: center;
 }
 
 .pagination .numbers {
@@ -226,7 +225,7 @@ details .detalhes .compartilhe .sociais button:hover {
 
 .pagination .numbers div, .pagination .prev, .pagination .next {
   background: #3D3D79;
-  border: none;
+  border: 1px solid #3D3D79;
   color: #fff;
   cursor: pointer;
   margin: 0 4px;
@@ -257,6 +256,10 @@ details .detalhes .compartilhe .sociais button:hover {
     flex-direction: row;
     justify-content: space-between;
     width: 30%;
+  }
+
+  .container .paginate .list .item { 
+    padding: 0;
   }
 
   details summary .nome{

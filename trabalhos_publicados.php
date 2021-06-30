@@ -211,10 +211,10 @@
     </section>
   </main>
 
-<footer>
+  <footer>
     <div class="container">
       <div class="logos">
-        <a href="./index.html"><img src="./assets/images/LogoObservatórioBranca.png" alt=""></a>
+        <a href="./index.html"><img src="./assets/images/LogoObservatorioBranca.png" alt=""></a>
         <div class="logos-secundarias">
           <a href="http://saude.sobral.ce.gov.br/politicas-sobre-drogas"><img src="./assets/images/logo-coord-psds.png" alt=""></a>
           <a href=""><img src="./assets/images/logo-gesam-sem-fundo.png" alt=""></a>
@@ -230,8 +230,8 @@
       </div>
       <div class="sociais">
         <ul>
-          <li><img src="./assets/svg/instagram icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
-          <li><img src="./assets/svg/twitter icon.svg" alt=""><a href="/" target="_blank">@Observatório</a></li>
+          <li><img src="./assets/svg/phone_black_24dp.svg" alt="">(88)993584258</li>
+          <li><img src="./assets/svg/phone_black_24dp.svg" alt="">(88)36111164</li>
         </ul>
       </div>
       <div class="contato">
