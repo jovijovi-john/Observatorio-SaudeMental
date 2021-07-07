@@ -1,5 +1,4 @@
 main .container {
-  background: #eee;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
@@ -26,10 +25,82 @@ main .container .reference {
   font-size: 12px;
 }
 
-.italic {
+.reference .italic {
   color: #5e5e5e;
   font-style: italic;
   text-decoration: none;
+}
+
+main .container .card-integrantes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+main .container .card-integrantes .card {
+  align-items: center;
+  background: linear-gradient(180deg, #3e4095, #202046);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  padding: 10px;
+  width: fit-content;
+}
+
+main .container .card-integrantes .card img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+main .container .card-integrantes .card .details .infos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+main .container .card-integrantes .card .details .infos .name {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+main .container .card-integrantes .card .details .infos .occupation {
+  color: #fff;
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+main .container .card-integrantes .card .details .infos .local {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  width: 200px;
+}
+
+main .container .card-integrantes .card .details .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+main .container .card-integrantes .card .details .links a {
+  outline: none;
+}
+
+main .container .card-integrantes .card .details .links a img {
+  border-radius: 0;
+  height: 25px;
+  margin: 0 10px;
+  width: 25px;
 }
 
 @media (max-width: 800px) {

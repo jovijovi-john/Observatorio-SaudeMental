@@ -8,22 +8,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Observatório</title>
-
-  <link rel="icon" href="./assets/images/LogoObservatorioBranca.png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Document</title>
+  
   <link rel="stylesheet" href="./styles/trabalhos_publicados.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
   <header>
     <div class="logos">
       <a href="./index.html"><img src="./assets/images/LogoObservatorio2.png" alt="Logo Dexters" class="dexters-logo"></a>
@@ -41,7 +35,12 @@
           </li>
           <li>
             <button>
-              <a href="./trabalhos_publicados.php">Trabalhos Publicados</a>
+              <a href="./trabalhos_publicados.html">Trabalhos Publicados</a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./noticias.html">Notícias</a>
             </button>
           </li>
           <li>
