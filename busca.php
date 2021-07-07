@@ -162,6 +162,13 @@
                         GROUP BY tp.id_trabalho
                         HAVING (p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."')";
 
+              /*$query = "SELECT * FROM trabalhos_publicados as tp 
+                          INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
+                          WHERE (p.palavra_pesquisa LIKE '%a%' OR tp.titulo LIKE '%a%') 
+                          and tp.id_trabalho IN 
+                              (SELECT pc.id_trabalho from palavra_chave as pc 
+                              WHERE pc.palavra_chave LIKE '%Pandemia%')" */
+
               if($autor!=null){
                 $query = $query." and tp.autor LIKE '".$autor."'";
               }
@@ -169,10 +176,12 @@
                 $query = $query." and tp.data_publicacao > '".$data."'";
               }
               if($palavra_chave!=null){
-                //$query = $query." and tp.data_publicacao LIKE '".$palavra_chave."'";
+                $query = $query." and tp.id_trabalho IN 
+                                (SELECT pc.id_trabalho from palavra_chave as pc 
+                                WHERE pc.palavra_chave LIKE '".$palavra_chave."')";
               }
               if($tipo!="%Tipo%"){
-                $query = $query." and tp.tipo LIKE '".$tipo."'";
+                $query = $query." and tp.tipo LIKE '".$tipo."'";  
               }
 
               $result = mysqli_query($mysqli, $query);
