@@ -1,5 +1,8 @@
+main {
+  margin: 10px 0;
+}
 main .container {
-  background: #eee;
+  /* background: #eee; */
   display: flex;
   flex-direction: column;
 }
@@ -99,6 +102,64 @@ main .contato button {
 
 main .contato button:hover {
   opacity: .7;
+}
+
+main .professores {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+main .professores .card-professor {
+  align-items: center;
+  background: linear-gradient(90deg, #3D3D79, #3E4095);
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+main .professores .card-professor img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+main .professores .card-professor .details {
+  padding: 20px;
+}
+
+main .professores .card-professor .details h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+main .professores .card-professor .details .local {
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+main .professores .card-professor .details .grupo {
+  font-weight: 100;
+}
+
+main .professores .card-professor .details .links {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100px;
+}
+
+main .professores .card-professor .details .links a img {
+  border-radius: 0%;
+  height: 20px;
+  width: 20px;
 }
 
 @media (max-width: 800px) {
