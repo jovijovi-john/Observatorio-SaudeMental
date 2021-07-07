@@ -43,11 +43,6 @@
   font-style: italic;
 }
 
-.type option {
-  border: none;
-  padding: 10px;
-}
-
 .container .search {
   display: flex;
   flex-direction: column;
@@ -129,7 +124,8 @@
   margin-bottom: 4px;
 }
 
-.card1 .resume {
+.card1 .panel {
+  display: none;
   margin: 20px 0;
 }
 
@@ -146,11 +142,11 @@
   font-weight: 300;
 }
 
-.card1 .tags-download { 
+.card1 { 
   margin-top: 20px;
 }
 
-.card1 .tags-download .tags-title {
+.card1 .tags-title {
   font-size: calc((12px + .25vw) * .875);
   font-weight: 700;
   letter-spacing: 4px;
@@ -158,57 +154,67 @@
   text-transform: uppercase;
 }
 
-.card1 .tags-download .tags {
-  width: 50%;
+.card1 .tags {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.card1 .tags-download .tags .list-tags {
+.card1 .tags .list-tags {
   display: flex;
   list-style: none;
 }
 
-.card1 .tags-download .tags .item-tag {
+.card1 .tags .item-tag {
   border: 1px solid #aeaec9;
   border-radius: 25px;
   /* color: #3E4095; */
   font-size: calc((16px + .25vw) * .875);
+  height: fit-content;
   margin-right: 20px;
   padding: 10px;
   width: fit-content;
 }
 
-.card1 .download {
-  display: flex;
-  flex-direction: row;
-  margin: 20px 0;
-  width: 100%;
-}
-
-.card1 .download a, .card1 .download button {
+.card1 .tags .download-btn {
   background: none;
   border: 1px solid #3E4095;
   border-radius: 25px;
   color: #3E4095;
   font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
+  padding: 15px;
+  transition: .1s ease-out;
+}
+
+.card1 button {
+  background: none;
+  border: 1px solid #3E4095;
+  border-radius: 25px;
+  color: #3E4095;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
   margin-right: 10px;
   text-decoration: none;
   padding: 15px;
   transition: .1s ease-out;
 }
 
-.card1 .download button {
+.card1 button {
   align-items: center;
   cursor: pointer;
   display: flex;
 }
 
-.card1 .download button img {
+.card1 button img {
   height: 20px;
   width: 20px;
 }
 
-.card1 .download a:hover, .card1 .download button:hover {
+.card1 .download-btn:hover, .card1 button:hover {
   background: #3E4095;
   color: #fff;
 }
@@ -225,78 +231,4 @@
   height: 1px;
   margin: 30px 0;
   width: 100%;
-}
-
-.pagination {
-  align-items: center;
-  display: flex;
-  margin: 0 auto;
-  width: 200px;
-}
-
-.pagination .numbers {
-  display: flex;
-}
-
-.pagination .numbers div, .pagination .prev, .pagination .next {
-  background: #3D3D79;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  margin: 0 4px;
-  padding: 8px;
-}
-
-.pagination .numbers div:hover, .pagination .prev:hover, .pagination .next:hover {
-  background: #fff;
-  color: #3D3D79;
-}
-
-.pagination .numbers .active {
-  border: 1px solid #3D3D79;
-  background: #fff;
-  color: #3D3D79;
-}
-@media (max-width: 800px) {
-  .container {
-    width: 90%;
-  }
-
-  .container details summary .header input {
-    width: 65%;
-  }
-
-  .container details summary .header .btn-pesquisas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 30%;
-  }
-
-  details summary .nome{
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-  }
-
-  details summary .nome span {
-    margin: 10px 0;
-    width: fit-content;
-  }
-
-  details summary .resumo {
-    font-size: 16px;
-  }
-
-  details .detalhes .btn-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px;
-    width: 100%;
-  }
-
-  details .detalhes .compartilhe {
-    margin-top: 10px;
-    width: 100%;
-  }
 }
