@@ -1,7 +1,6 @@
   <?php
     require_once('conexao.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   
-  <link rel="stylesheet" href="./styles/noticias.css">
+  <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/styles.css">
 
   <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
   <header>
     <div class="logos">
@@ -59,17 +58,79 @@
     <img src="./assets/svg/menu-24px.svg" alt="" class="open-btn" onclick="openMenu()">
   </header>
 
-  <?php 
-      if(!isset($_GET['Noticia'])){
-        include('noticias.php');
-      }else{
-        include('noticia.php');
-      }
+  <main>
 
-  ?>
-    
-    <div class="line-gray"></div>
-  </section>
+    <section id="slider">
+      <ul class="slider-content">
+        <li class="slider-item fade">
+          <div class="texto-banner">
+            <div class="intro-noticia">
+              <h3>Observatório Saúde Mental e Políticas sobre Drogas</h3>
+              <p>Captação de obras na área de saúde mental e políticas sobre drogas no município de Sobral-CE</p>
+              <a href="./sobre.html">Conheça</a>
+            </div>
+          </div>
+        </li>
+          <?php
+            mysqli_select_db($mysqli, $bd) or die("Could not select database");
+
+            $query = "SELECT * FROM noticias";
+            $result = mysqli_query($mysqli, $query);
+            $num_results = mysqli_num_rows($result);
+
+            if($num_results > 0) {
+                for($i=0; $i<$num_results; $i++) {
+                    $row = mysqli_fetch_array($result);
+        ?>
+        <!-- INICIO -->
+        <li class="slider-item fade">
+          <div class="texto-banner">
+            <div class="intro-noticia">
+              <h3><?php print_r(utf8_encode($row['Titulo'])) ?></h3>
+              <p><?php print_r(utf8_encode($row['Descricao'])) ?> </p>
+              <a href="./sobre.html">Conheça</a>
+            </div>
+          </div>
+        </li>
+        <?php
+          }
+        }
+        ?>
+        <!-- FIM -->
+        <button class="preview">
+          <img src="./assets/svg/navigate_before-24px.svg" onclick="plusSlides(-1)" alt="">
+        </button>
+        <button class="next">
+          <img src="./assets/svg/navigate_next-24px.svg" onclick="plusSlides(1)" alt="">
+        </button>
+      </ul>
+    </section>
+
+    <section id="sobre">
+      <div class="resumo-dexters">
+        <div class="images">
+          <figure class="gallery__item gallery__item--1">
+            <img src="./assets/images/photo-8.jpg" alt="Gallery image 1" class="gallery__img">
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img src="./assets/images/photo-7.jpg" alt="Gallery image 2" class="gallery__img">
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img src="./assets/images/photo-9.jpg" alt="Gallery image 3" class="gallery__img">
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img src="./assets/images/photo-5.jpg" alt="Gallery image 4" class="gallery__img">
+        </div>
+        <div class="text-dexters">
+          <h1>Conheça o <mark class="highlight">Observatório</mark></h1>
+          <p>O Observatório de Saúde Mental e Políticas sobre Drogas é uma iniciativa do Grupo de Estudo e Pesquisa Saúde Mental e Cuidado (GESAM), da Universidade Estadual Vale do Acaraú (UVA), em parceria com a Secretaria de Saúde de Sobral-CE, por meio da Coordenadoria de Políticas sobre Drogas. A nossa missão é o acompanhamento estratégico/científico destas temáticas; aperfeiçoamento e difusão de informações nessas áreas assim como fortalecimento do campo da atenção psicossocial. Ressalta-se ainda que sua criação e institucionalização acontece sem fins lucrativos.
+          </p>
+          <a href="./sobre.html">Veja Mais ></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
     <div class="container">
       <div class="logos">
@@ -98,6 +159,6 @@
       </div>
     </div>
   </footer>
+  <script src="./scripts/script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
