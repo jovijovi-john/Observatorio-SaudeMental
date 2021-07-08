@@ -35,12 +35,12 @@
           </li>
           <li>
             <button>
-              <a href="./trabalhos_publicados.html">Trabalhos Publicados</a>
+              <a href="./trabalhos_publicados.php">Trabalhos Publicados</a>
             </button>
           </li>
           <li>
             <button>
-              <a href="./noticias.html">Notícias</a>
+              <a href="./ListaNoticias.php">Notícias</a>
             </button>
           </li>
           <li>
@@ -137,47 +137,22 @@
       <details>
         <summary>
           <div class="nome">
-           <?php print_r(utf8_encode($row['titulo']));?>
+           <?php print_r(utf8_encode($row['Titulo']));?>
             <span>Detalhes</span>
           </div>
           <ul>
-            <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
-            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
-            <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['data_publicacao']));?></li>
-            <li><b>Palavras-chaves: </b> 
-              <?php
-                $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
-                $keywordsresult = mysqli_query($mysqli, $queryKey);
-                $num_results_KeysWord = mysqli_num_rows($keywordsresult);
-      
-                if($num_results_KeysWord > 0){
-                  for($j=0;$j<$num_results_KeysWord;$j++){
-                    $rowKeys = mysqli_fetch_array($keywordsresult);
-                    print_r(utf8_encode($rowKeys['palavra_chave']));
-                    if($j != $num_results_KeysWord - 1){
-                      print_r(", ");
-                    }
-                  }
-                }
-              ?>
-
-            </li>
+            <li><b>Autor: </b> <?php print_r(utf8_encode($row['Autor']));?></li>
+            <li><b>Tipo: </b> <?php print_r(utf8_encode($row['Tipo']));?></li>
+            <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['Data']));?></li>
+            <li><b>Palavras-chaves: <?php print_r(utf8_encode($row['Palavras_Chave'])) ?> </b></li>
           </ul>
         </summary>
         <div class="detalhes">
           <div class="resumo">
             <h3>Resumo</h3>
-            <p><?php print_r(utf8_encode($row['res']));?></p>
+            <p><?php print_r(utf8_encode($row['Resumo']));?></p>
           </div>
           <div class="share">
-            <div class="citation">
-              <h3>Cite</h3>
-              <div class="btn-container">
-                <button onclick='cite(`<?php print_r($row['cite_abnt'])?>`)'>ABNT</button>
-                <button onclick='cite(`<?php print_r($row['cite_apa'])?>`)'>APA</button>
-                <button onclick='cite(`<?php print_r($row['cite_vancouver'])?>`)'>VANCOUVER</button>
-              </div>
-            </div>
             <div class="compartilhe">
               <h3>Compartilhe</h3>
               <div class="sociais">
