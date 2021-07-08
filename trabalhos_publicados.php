@@ -114,7 +114,7 @@
                     $row = mysqli_fetch_array($result);
         ?>
       <li class="item">
-      <details>
+      <!-- <details>
         <summary>
           <div class="nome">
            <?php print_r(utf8_encode($row['Titulo']));?>
@@ -143,10 +143,8 @@
             </div>
           </div>
         </div>
-      </details>
-      </li>
-
-    <div class="line-purple"></div>
+      </details> -->
+      <div class="line-purple"></div>
     <div class="card1">
       <div class="details">
         <div class="data-name">
@@ -234,93 +232,7 @@
         </div>
         <button class="button-show-more">Ver mais</button>
         <div class="line-gray"></div>
-
-        <div class="card1">
-      <div class="details">
-        <div class="data-name">
-          <p class="data">2021-01-01</p>
-          <h5 class="article-name">
-            Saúde Mental: Desafios da Prevenção, Diagnóstico, Tratamento e Cuidado na Sociedade Moderna
-          </h5>
-        </div>
-        <div class="share">
-          <p class="type">Compartilhe <br> a publicação</p>
-          <div class="links">
-            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
-          </div>
-        </div>
-        <div class="authors">
-          <p class="authors-names">Autores</p>
-          <ul class="list-authors">
-            <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
-            <li class="item-author-name">Guilherme Augusto G. Martins</li>
-          </ul>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="resume">
-          <p class="resume-title">Resumo</p>
-          <p class="resume-text">
-            Sem Saúde Mental desde os primórdios tem despertado o interesse e questionamentos da humanidade. Em sua essência recebe a definição atribuída pela Organização Mundial de Saúde como sendo aquele estado de bem-estar no qual o indivíduo consegue perceber suas habilidades, administrar os estresses do dia a dia e trabalhar de forma produtiva contribuindo para a sociedade. Para uma efetiva atenção em saúde mental se faz necessário o empenho de uma equipe multi e interdisciplinar, que atenda ao indivíduo, família e comunidade em sua integralidade, seja na esfera pública ou privada. Ademais, as políticas de saúde devem garantir a prevenção e o tratamento dos agravos de ordem psíquica dentro das condições mais humanizadoras possíveis. Sabe-se que a dor e o sofrimento das pessoas acometidas é real e impacta familiares, amigos e a sociedade. O sofrimento mental tem ganhado notoriedade na atualidade pelo crescente número de pessoas em adoecimento frente à atual crise sanitária e econômica imposta pela infecção do Coronavírus SARS-CoV-2, configurando-se como um preocupante problema de saúde pública. Contudo, essas questões da mente não são novas, inclusive, dados apontam o Brasil como o país mais ansioso do mundo. Nessa perspectiva, devemos ampliar mais a discussão sobre a Saúde Mental, disciplina tão relevante para a saúde global do ser humano. Frente a esses elementos, resolvemos dedicar este livro específico para a divulgação de estudos sobre a temática, a fim de contribuir para a ampliação dos conhecimentos, dirimir dúvidas, reduzir preconceitos e estigmas que circundam o tema. Acreditamos que, além de um veículo de divulgação de pesquisas, poderá incitar a reflexão crítica dos leitores sobre as questões abordadas, bem como estimular novas investigações.
-          </p>
-        </div>
-        <p class="tags-title">Palavras-chave</p>
-        <div class="tags">
-          <ul class="list-tags">
-            <li class="item-tag">Cuidado</li>
-            <li class="item-tag">Saúde Mental</li>
-            <li class="item-tag">Saúde Pública</li>
-          </ul>
-        </div>
-      </div>
-      <button class="button-show-more">Ver mais</button>
-      <div class="line-gray"></div>
-      <div class="card1">
-        <div class="details">
-          <div class="data-name">
-            <p class="data">2021-01-01</p>
-            <h5 class="article-name">
-              Saúde Mental: Desafios da Prevenção, Diagnóstico, Tratamento e Cuidado na Sociedade Moderna
-            </h5>
-          </div>
-          <div class="share">
-            <p class="type">Compartilhe <br> a publicação</p>
-            <div class="links">
-              <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-              <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
-              <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-              <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
-            </div>
-          </div>
-          <div class="authors">
-            <p class="authors-names">Autores</p>
-            <ul class="list-authors">
-              <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
-              <li class="item-author-name">Guilherme Augusto G. Martins</li>
-            </ul>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="resume">
-            <p class="resume-title">Resumo</p>
-            <p class="resume-text">
-              Sem Saúde Mental desde os primórdios tem despertado o interesse e questionamentos da humanidade. Em sua essência recebe a definição atribuída pela Organização Mundial de Saúde como sendo aquele estado de bem-estar no qual o indivíduo consegue perceber suas habilidades, administrar os estresses do dia a dia e trabalhar de forma produtiva contribuindo para a sociedade. Para uma efetiva atenção em saúde mental se faz necessário o empenho de uma equipe multi e interdisciplinar, que atenda ao indivíduo, família e comunidade em sua integralidade, seja na esfera pública ou privada. Ademais, as políticas de saúde devem garantir a prevenção e o tratamento dos agravos de ordem psíquica dentro das condições mais humanizadoras possíveis. Sabe-se que a dor e o sofrimento das pessoas acometidas é real e impacta familiares, amigos e a sociedade. O sofrimento mental tem ganhado notoriedade na atualidade pelo crescente número de pessoas em adoecimento frente à atual crise sanitária e econômica imposta pela infecção do Coronavírus SARS-CoV-2, configurando-se como um preocupante problema de saúde pública. Contudo, essas questões da mente não são novas, inclusive, dados apontam o Brasil como o país mais ansioso do mundo. Nessa perspectiva, devemos ampliar mais a discussão sobre a Saúde Mental, disciplina tão relevante para a saúde global do ser humano. Frente a esses elementos, resolvemos dedicar este livro específico para a divulgação de estudos sobre a temática, a fim de contribuir para a ampliação dos conhecimentos, dirimir dúvidas, reduzir preconceitos e estigmas que circundam o tema. Acreditamos que, além de um veículo de divulgação de pesquisas, poderá incitar a reflexão crítica dos leitores sobre as questões abordadas, bem como estimular novas investigações.
-            </p>
-          </div>
-          <p class="tags-title">Palavras-chave</p>
-          <div class="tags">
-            <ul class="list-tags">
-              <li class="item-tag">Cuidado</li>
-              <li class="item-tag">Saúde Mental</li>
-              <li class="item-tag">Saúde Pública</li>
-            </ul>
-            <a href="/" class="download-btn">Download</a>
-          </div>
-        </div>
-        <button class="button-show-more">Ver mais</button>
+      </li>
       <!-- END -->
     <?php
       }
