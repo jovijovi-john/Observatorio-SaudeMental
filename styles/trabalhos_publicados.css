@@ -244,15 +244,17 @@
 }
 
 .pagination .numbers div, .pagination .prev, .pagination .next {
+  align-items: center;
   background: none;
   border: 1px solid #3D3D79;
   border-radius: 50%;
   color: #3D3D79;
   cursor: pointer;
-  height: 50px;
+  display: flex;
+  height: 25px;
   margin: 0 4px;
   padding: 8px;
-  width: 50px;
+  width: 25px;
 }
 
 .pagination .numbers div:hover, .pagination .prev:hover, .pagination .next:hover {
