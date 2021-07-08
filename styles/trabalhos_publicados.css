@@ -244,9 +244,10 @@
 }
 
 .pagination .numbers div, .pagination .prev, .pagination .next {
-  background: #3D3D79;
+  background: none;
   border: 1px solid #3D3D79;
-  color: #fff;
+  border-radius: 50%;
+  color: #3D3D79;
   cursor: pointer;
   margin: 0 4px;
   padding: 8px;
@@ -258,9 +259,8 @@
 }
 
 .pagination .numbers .active {
-  border: 1px solid #3D3D79;
-  background: #fff;
-  color: #3D3D79;
+  background: #3D3D79;
+  color: #fff;
 }
 @media (max-width: 800px) {
   .container {
