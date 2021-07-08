@@ -97,11 +97,15 @@
         }
         ?>
         <!-- FIM -->
-        <button class="preview">
-          <img src="./assets/svg/navigate_before-24px.svg" onclick="plusSlides(-1)" alt="">
+        <button class="preview" onclick="plusSlides(-1)">
+          <span class="material-icons">
+            navigate_before
+          </span>
         </button>
-        <button class="next">
-          <img src="./assets/svg/navigate_next-24px.svg" onclick="plusSlides(1)" alt="">
+        <button class="next" onclick="plusSlides(1)">
+          <span class="material-icons">
+            navigate_next
+          </span>
         </button>
       </ul>
     </section>

@@ -144,7 +144,7 @@
           </div>
         </div>
       </details> -->
-      <div class="line-purple"></div>
+    <div class="line-purple"></div>
     <div class="card1">
       <div class="details">
         <div class="data-name">
@@ -242,13 +242,21 @@
       </section>
 
       <div class="pagination"> <!-- botões -->
-        <div class="prev"><</div>
+        <div class="prev">
+          <span class="material-icons">
+            navigate_before
+          </span>
+        </div>
         <div class="numbers">
           <div>1</div>
           <div>2</div>
           <div>3</div>
         </div>
-        <div" class="next">></div>
+        <div" class="next">
+          <span class="material-icons">
+            navigate_next
+          </span>
+        </div>
       </div>
     </section>
   </main>

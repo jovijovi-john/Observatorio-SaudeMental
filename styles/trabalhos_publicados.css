@@ -252,6 +252,7 @@
   cursor: pointer;
   display: flex;
   height: 25px;
+  justify-content: center;
   margin: 0 4px;
   padding: 8px;
   width: 25px;

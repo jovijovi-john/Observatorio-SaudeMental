@@ -5,20 +5,29 @@
   width: 100%;
 }
 
+.slider-content .preview span, .slider-content .next span {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 100;
+}
+
 .slider-content .preview, .slider-content .next {
   align-items: center;
-  background: #cccccc6c;
-  border: none;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
-  height: 60px;
+  height: 50px;
+  justify-content: center;
+  margin: 0 10px;
   outline: none;
   padding: 8px;
   position: absolute;
   text-decoration: none;
   top: 50%;
   transition: .6s ease;
-  width: auto;
+  width: 50px;
 }
 
 .slider-content .next {
@@ -30,7 +39,8 @@
 }
 
 .slider-content .preview:hover, .slider-content .next:hover {
-  background: #ccccccdc;
+  background: #3D3D79;
+  border: 1px solid #3D3D79;
 }
 
 .texto-banner {
@@ -76,7 +86,7 @@
   color: #fff;
 }
 
-.active, .dot:hover {
+.active, .dot:hover { 
   background-color: #717171;
 }
 
