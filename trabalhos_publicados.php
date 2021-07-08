@@ -30,7 +30,7 @@
         <ul>
           <li>
             <button>
-              <a href="./index.html">Início</a>
+              <a href="./index.php">Início</a>
             </button>
           </li>
           <li>
