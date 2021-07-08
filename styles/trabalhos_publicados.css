@@ -249,8 +249,10 @@
   border-radius: 50%;
   color: #3D3D79;
   cursor: pointer;
+  height: 50px;
   margin: 0 4px;
   padding: 8px;
+  width: 50px;
 }
 
 .pagination .numbers div:hover, .pagination .prev:hover, .pagination .next:hover {
