@@ -204,6 +204,10 @@ footer .infos img {
   width: 25px;
 }
 
+footer .infos h2 {
+  color: #fff;
+}
+
 footer .infos a, footer .infos p {
   color: #fff;
   margin-left: 20px;
