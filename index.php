@@ -84,11 +84,11 @@
         ?>
         <!-- INICIO -->
         <li class="slider-item fade">
-          <div class="texto-banner">
+          <div class="texto-banner" style="background-image: url(./assets/noticias/<?php print_r(utf8_encode($row['Foto'])) ?>);">
             <div class="intro-noticia">
               <h3><?php print_r(utf8_encode($row['Titulo'])) ?></h3>
               <p><?php print_r(utf8_encode($row['Descricao'])) ?> </p>
-              <a href="./sobre.html">Conheça</a>
+              <a href="./sobre.html">Ver mais</a>
             </div>
           </div>
         </li>
