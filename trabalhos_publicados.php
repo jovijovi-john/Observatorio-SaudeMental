@@ -65,59 +65,39 @@
     </div>
     
     <section class="container">
-      <details>
-        <summary>
-          <form action="busca.php" method="GET">
-          <div class="header">
-              <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
-              <div class="btn-pesquisas">
-                <button>
-                  <span class="material-icons">
-                    search
-                  </span>
-                </button>
-                <span class="material-icons">
-                  manage_search
-                </span>
-              </div>
-          </div>
-        </summary>
-        <div class="filtro">
-          <div class="author">
-            <h5>Filtrar por Autor: </h5>
-            <input type="text" name="autor" placeholder="Autor">
-          </div>
-          <div class="author">
-            <h5>Filtrar por Data: </h5>
-            <input type="date" name="data" placeholder=>
-          </div>
-          <div class="author">
-            <h5>Palavra-chave: </h5>
-            <input type="text" name="palavra-chave" placeholder="Palavra-chave">
-          </div>
-          <div class="author">
-            <h5>Tipo: </h5>
-            <select name="selection_tipo" id="" value="Tipo">
-              <option value="Tipo">Tipo</option>
-              <option value="Artigo">Artigo</option>
-              <option value="TCC Graduação">TCC Graduação</option>
-              <option value="TCC Especialização">TCC Especialização</option>
-              <option value="Dissertação Mestrado">Dissertação Mestrado</option>
-              <option value="Tese Doutorado">Tese Doutorado</option>
-              <option value="Livro">Livro</option>
-              <option value="Capítulo de Livro">Capítulo de Livro</option>
-              <option value="Produção Técnica">Produção Técnica</option>
-              <option value="Documentos Institucionais">Documentos Institucionais</option>
-            </select>
-          </div>
-          <button class="btn-filter">
-            <span class="material-icons">
-              filter_alt
-            </span>
-          </button>
-          </div>
-        </form>
-      </details>
+    <form action="" class="filtro">
+      <div class="publication">
+        <label for="publication">Publicação</label>
+        <input name="publication" type="text" placeholder="Saúde Mental...">
+      </div>
+      <div class="author">
+        <label for="author">Autor</label>
+        <input name="author" type="text" placeholder="Guilherme...">
+      </div>
+      <div class="keyword">
+        <label for="keyword">Palavra-chave</label>
+        <input name="keyword" type="text" placeholder="cuidado...">
+      </div>
+      <div class="type">
+        <label for="type">Tipo</label>
+        <select name="type" id="">
+          <option value="">Tipo</option>
+          <option value="">Artigo</option>
+          <option value="">TCC Graduação</option>
+          <option value="">TCC Especialização</option>
+          <option value="">Dissertação Mestrado</option>
+          <option value="">Tese Doutorado</option>
+          <option value="">Livro</option>
+          <option value="">Capítulo de Livro</option>
+          <option value="">Produção Técnica</option>
+          <option value="">Documentos Institucionais</option>
+        </select>
+      </div>
+      <div class="search">
+        <label for="search-button">Buscar</label>
+        <button name="search-button" class="search-button"><img src="./assets/svg/search_black_24dp.svg" alt=""></button>
+      </div>
+    </form>
       <!-- START  -->
       
     <section id="paginate">
