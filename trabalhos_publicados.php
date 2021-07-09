@@ -29,7 +29,7 @@
     </div>
     
     <section class="container">
-    <form action="" class="filtro">
+    <form action="busca.php" class="filtro" method="GET">
       <div class="publication">
         <label for="publication">Publicação</label>
         <input name="publication" type="text" placeholder="Saúde Mental...">
@@ -44,17 +44,17 @@
       </div>
       <div class="type">
         <label for="type">Tipo</label>
-        <select name="type" id="">
-          <option value="">Tipo</option>
-          <option value="">Artigo</option>
-          <option value="">TCC Graduação</option>
-          <option value="">TCC Especialização</option>
-          <option value="">Dissertação Mestrado</option>
-          <option value="">Tese Doutorado</option>
-          <option value="">Livro</option>
-          <option value="">Capítulo de Livro</option>
-          <option value="">Produção Técnica</option>
-          <option value="">Documentos Institucionais</option>
+        <select name="type" id="Artigo">
+          <option value="Tipo" disabled>Tipo</option>
+          <option value="Artigo">Artigo</option>
+          <option value="TCC Graduação">TCC Graduação</option>
+          <option value="TCC Especialização">TCC Especialização</option>
+          <option value="Dissertação Mestrado">Dissertação Mestrado</option>
+          <option value="Tese Doutorado">Tese Doutorado</option>
+          <option value="Livro">Livro</option>
+          <option value="Capítulo de Livro">Capítulo de Livro</option>
+          <option value="Produção Técnica">Produção Técnica</option>
+          <option value="Documentos Institucionais">Documentos Institucionais</option>
         </select>
       </div>
       <div class="search">

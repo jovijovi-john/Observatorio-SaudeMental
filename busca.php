@@ -1,32 +1,26 @@
 <?php
     require_once('conexao.php');
 
-    if(isset($_GET['pesquisa'])){
-      $pesquisa = "%".trim($_GET['pesquisa'])."%";
+    if(isset($_GET['publication'])){
+      $pesquisa = $_GET['publication'];
     }else{
       $pesquisa = null;
     }
 
-    if(isset($_GET['autor'])){
-      $autor = "%".trim($_GET['autor'])."%";
+    if(isset($_GET['author'])){
+      $autor = $_GET['author'];
     }else{
       $autor = null;
     }
 
-    if(isset($_GET['data'])){
-      $data = $_GET['data'];
-    }else{
-      $data = null;
-    }
-
-    if(isset($_GET['palavra-chave'])){
-      $palavra_chave = "%".trim($_GET['palavra-chave'])."%";
+    if(isset($_GET['keyword'])){
+      $palavra_chave = $_GET['keyword'];
     }else{
       $palavra_chave = null;
     }
 
     if(isset($_GET['selection_tipo'])){
-      $tipo = "%".trim($_GET['selection_tipo'])."%";
+      $tipo = $_GET['selection_tipo'];
     }else{
       $tipo = null;
     }
@@ -58,65 +52,45 @@
     include('header.php');
   ?>
 
-  <main>
+<main>
     <div class="section-header"> <!-- para mudar a cor é so acessar essa clase em style.css -->
       <h2>Trabalhos Publicados</h2>
     </div>
     
     <section class="container">
-      <details>
-        <summary>
-          <form action="busca.php" method="GET">
-          <div class="header">
-              <input type="search" name="pesquisa" id="" placeholder="Pesquisa">
-              <div class="btn-pesquisas">
-                <button>
-                  <span class="material-icons">
-                    search
-                  </span>
-                </button>
-                <span class="material-icons">
-                  manage_search
-                </span>
-              </div>
-          </div>
-        </summary>
-        <div class="filtro">
-          <div class="author">
-            <h5>Filtrar por Autor: </h5>
-            <input type="text" name="autor" placeholder="Autor">
-          </div>
-          <div class="author">
-            <h5>Filtrar por Data: </h5>
-            <input type="date" name="data" placeholder=>
-          </div>
-          <div class="author">
-            <h5>Palavra-chave: </h5>
-            <input type="text" name="palavra-chave" placeholder="Palavra-chave">
-          </div>
-          <div class="author">  
-            <h5>Tipo: </h5>
-            <select name="selection_tipo" id="" value="Tipo">
-              <option value="Tipo">Tipo</option>
-              <option value="Artigo">Artigo</option>
-              <option value="TCC Graduação">TCC Graduação</option>
-              <option value="TCC Especialização">TCC Especialização</option>
-              <option value="Dissertação Mestrado">Dissertação Mestrado</option>
-              <option value="Tese Doutorado">Tese Doutorado</option>
-              <option value="Livro">Livro</option>
-              <option value="Capítulo de Livro">Capítulo de Livro</option>
-              <option value="Produção Técnica">Produção Técnica</option>
-              <option value="Documentos Institucionais">Documentos Institucionais</option>
-            </select>
-          </div>
-          <button class="btn-filter">
-            <span class="material-icons">
-              filter_alt
-            </span>
-          </button>
-          </div>
-        </form>
-      </details>
+    <form action="busca.php" class="filtro" method="<?php echo $_SERVER['PHP_SELF']?>"> 
+      <div class="publication">
+        <label for="publication">Publicação</label>
+        <input name="publication" type="text" placeholder="Saúde Mental..." value="<?php echo $pesquisa;?>">
+      </div>
+      <div class="author">
+        <label for="author">Autor</label>
+        <input name="author" type="text" placeholder="Guilherme..." value="<?php echo $autor;?>">
+      </div>
+      <div class="keyword">
+        <label for="keyword">Palavra-chave</label>
+        <input name="keyword" type="text" placeholder="cuidado..." value="<?php echo $palavra_chave;?>">
+      </div>
+      <div class="type">
+        <label for="type">Tipo</label>
+        <select name="type" id="">
+          <option value="Tipo" disabled>Tipo</option>
+          <option value="Artigo">Artigo</option>
+          <option value="TCC Graduação">TCC Graduação</option>
+          <option value="TCC Especialização">TCC Especialização</option>
+          <option value="Dissertação Mestrado">Dissertação Mestrado</option>
+          <option value="Tese Doutorado">Tese Doutorado</option>
+          <option value="Livro">Livro</option>
+          <option value="Capítulo de Livro">Capítulo de Livro</option>
+          <option value="Produção Técnica">Produção Técnica</option>
+          <option value="Documentos Institucionais">Documentos Institucionais</option>
+        </select>
+      </div>
+      <div class="search">
+        <label for="search-button">Buscar</label>
+        <button name="search-button" class="search-button"><img src="./assets/svg/search.svg" alt=""></button>
+      </div>
+    </form>
       <!-- START  -->
       
       <section id="paginate">
