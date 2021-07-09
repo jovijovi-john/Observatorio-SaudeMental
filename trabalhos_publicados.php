@@ -69,7 +69,7 @@
        <?php
             mysqli_select_db($mysqli, $bd) or die("Could not select database");
 
-            $query = "SELECT * FROM trabalhos_publicados ORDER BY CONVERT(DATE, Data, 126)";
+            $query = "SELECT * FROM trabalhos_publicados";
             $result = mysqli_query($mysqli, $query);
             $num_results = mysqli_num_rows($result);
 
@@ -101,7 +101,8 @@
         <div class="authors">
           <p class="authors-names">Autores</p>
           <ul class="list-authors">
-            <li class="item-author-name"><?php print_r(utf8_encode($row['Autor']))?></li>
+            <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
+            <li class="item-author-name">Guilherme Augusto G. Martins</li>
           </ul>
         </div>
       </div>
@@ -119,7 +120,7 @@
             <li class="item-tag">Saúde Mental</li>
             <li class="item-tag">Saúde Pública</li>
           </ul>
-        </div>
+        </div>	
       </div>
       <button class="button-show-more">Ver mais</button>
       <!-- fim -->
