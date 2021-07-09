@@ -89,33 +89,24 @@ main .container .card-integrantes .card .details .infos .local {
   width: 200px;
 }
 
-main .container .card-integrantes .card .details .links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0 auto;
-  width: 80%;
-}
-
-main .container .card-integrantes .card .details .links a {
-  outline: none;
-}
-
-main .container .card-integrantes .card .details .links a img {
-  border-radius: 0;
-  height: 25px;
-  margin: 0 10px;
-  width: 25px;
-}
-
 @media (max-width: 800px) {
   main .container {
     margin: 20px auto;
     padding: 40px;
-    width: 90%;
+    width: 100%;
   }
 
   main .container h4 {
     font-size: 22px;
+  }
+
+  main .container .card-integrantes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main .container .card-integrantes .card {
+    margin: 0;
+    margin-top: 10px;
   }
 }

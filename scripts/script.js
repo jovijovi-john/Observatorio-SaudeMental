@@ -14,7 +14,7 @@ function clearTime() {
   clearTimeout(time);
 }
 
-function plusSlides() {
+function plusSlides(n) {
   showSlides(slideIndex);
   clearTime();
 }
