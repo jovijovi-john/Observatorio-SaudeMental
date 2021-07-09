@@ -42,7 +42,7 @@
             $num_results = mysqli_num_rows($result);
 
             if($num_results > 0) {
-                for($i=0; $i<$num_results; $i++) {
+                for($i=0; $i<3; $i++) {
                     $row = mysqli_fetch_array($result);
         ?>
         <!-- INICIO -->
