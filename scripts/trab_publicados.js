@@ -1,5 +1,4 @@
-
-const html = {
+const html2 = {
   getAll(element) {
     return document.querySelectorAll(element)
   },
@@ -8,8 +7,8 @@ const html = {
   }
 }
 
-var button = html.getAll('.button-show-more')
-var tags = html.getAll('.tags-download')
+var button = html2.getAll('.button-show-more')
+var tags = html2.getAll('.tags-download')
 
 for (var i=0; i<button.length; i++) {
   button[i].addEventListener('click', function() {
@@ -17,6 +16,7 @@ for (var i=0; i<button.length; i++) {
     if (panel.style.display === 'none' || panel.style.display === "") {
       panel.style.display = 'block'
       console.log(button)
+	  
     } else {
       panel.style.display = 'none'
     }

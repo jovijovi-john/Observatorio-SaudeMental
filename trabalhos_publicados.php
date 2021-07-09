@@ -157,26 +157,5 @@
   <script src="./scripts/script.js"></script>
   <script src="./scripts/pagination.js"></script>
   <script src="./scripts/trab_publicados.js"></script>
-
-  <script type="text/javascript">
-   function cite(str) {
-    // Create new element
-   var el = document.createElement('textarea');
-   // Set value (string to be copied)
-   el.value = str;
-   // Set non-editable to avoid focus and move outside of view
-   el.setAttribute('readonly', '');
-   el.style = {position: 'absolute', left: '-9999px'};
-   document.body.appendChild(el);
-   // Select text inside element
-   el.select();
-   // Copy text to clipboard
-   document.execCommand('copy');
-   // Remove temporary element
-   document.body.removeChild(el);
-   alert('Citação copiada para área de transferêcia');
-}
-  </script>
-
 </body>
 </html>
