@@ -21,9 +21,9 @@
     <div class="card">
       <img src="./assets/noticias/<?php print_r(utf8_encode($row['Foto']))?>" alt="">
       <div class="details">
-        <h1>Title: <?php print_r(utf8_encode($row['Titulo'])) ?></h1>
+        <h1>Título: <?php print_r(utf8_encode($row['Titulo'])) ?></h1>
         <p>Description: <?php print_r(utf8_encode($row['Descricao'])) ?></p>
-        <a href="?Noticia">Ver mais</a>
+        <a href="?Noticia=<?php print_r(utf8_encode($row['idNoticia']))?>">Ver mais</a>
       </div>
     </div>
     <?php 
