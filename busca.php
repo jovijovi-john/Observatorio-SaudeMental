@@ -98,19 +98,10 @@
           <?php
               mysqli_select_db($mysqli, $bd) or die("Could not select database");
   
-              $query = "SELECT * FROM trabalhos_publicados as tp 
-                        INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
-                        GROUP BY tp.id_trabalho
-                        HAVING (p.palavra_pesquisa LIKE '".$pesquisa."' OR tp.titulo LIKE '".$pesquisa."')";
-
-              /*$query = "SELECT * FROM trabalhos_publicados as tp 
-                          INNER JOIN pesquisa as p on tp.id_trabalho=p.id_trabalho 
-                          WHERE (p.palavra_pesquisa LIKE '%a%' OR tp.titulo LIKE '%a%') 
-                          and tp.id_trabalho IN 
-                              (SELECT pc.id_trabalho from palavra_chave as pc 
-                              WHERE pc.palavra_chave LIKE '%Pandemia%')" */
-
-              if($autor!=null){
+              $query = "SELECT * FROM trabalhos_publicados
+                        WHERE Titulo LIKE '%".trim($pesquisa)."%' OR Resumo LIKE '%".trim($pesquisa)."%';";
+              
+              /*if($autor!=null){
                 $query = $query." and tp.autor LIKE '".$autor."'";
               }
               if($data!=null){
@@ -123,7 +114,7 @@
               }
               if($tipo!="%Tipo%"){
                 $query = $query." and tp.tipo LIKE '".$tipo."'";  
-              }
+              }*/
 
               $result = mysqli_query($mysqli, $query);
               $num_results = mysqli_num_rows($result);
@@ -132,87 +123,77 @@
                   for($i=0; $i<$num_results; $i++) {
                       $row = mysqli_fetch_array($result);
           ?>
-        <li class="item">
-        <details>
-          <summary>
-            <div class="nome">
-              <?php print_r(utf8_encode($row['titulo']));?>
-              <span>Detalhes</span>
-            </div>
-            <ul>
-              <li><b>Autor: </b> <?php print_r(utf8_encode($row['autor']));?></li>
-              <li><b>Tipo: </b> <?php print_r(utf8_encode($row['tipo']));?></li>
-              <li><b>Data de Publicação: </b><?php print_r(utf8_encode($row['data_publicacao']));?></li>
-              <li><b>Palavras-chaves: </b> 
-                <?php
-                  $queryKey = "SELECT palavra_chave FROM palavra_chave WHERE id_trabalho = ".$row['id_trabalho'];
-                  $keywordsresult = mysqli_query($mysqli, $queryKey);
-                  $num_results_KeysWord = mysqli_num_rows($keywordsresult);
-        
-                  if($num_results_KeysWord > 0){
-                    for($j=0;$j<$num_results_KeysWord;$j++){
-                      $rowKeys = mysqli_fetch_array($keywordsresult);
-                      print_r(utf8_encode($rowKeys['palavra_chave']));
-                      if($j != $num_results_KeysWord - 1){
-                        print_r(", ");
-                      }
-                    }
-                  }
-                ?>
-  
-              </li>
-            </ul>
-          </summary>
-          <div class="detalhes">
-            <div class="resumo">
-              <h3>Resumo</h3>
-              <p><?php print_r(utf8_encode($row['res']));?></p>
-            </div>
-            <div class="share">
-              <div class="citation">
-                <h3>Cite</h3>
-                <div class="btn-container">
-                  <button onclick='cite(`<?php print_r($row['cite_abnt'])?>`)'>ABNT</button>
-                  <button onclick='cite(`<?php print_r($row['cite_apa'])?>`)'>APA</button>
-                  <button onclick='cite(`<?php print_r($row['cite_vancouver'])?>`)'>VANCOUVER</button>
-                </div>
-              </div>
-              <div class="compartilhe">
-                <h3>Compartilhe</h3>
-                <div class="sociais">
-                  <button><img src="./assets/svg/facebook icon.svg" alt=""></button>
-                  <button><img src="./assets/svg/twitter icon.svg" alt=""></button>
-                  <button><img src="./assets/svg/instagram icon.svg" alt=""></button>
-                </div>
-              </div>
-            </div>
+          <li class="item">
+    <div class="line-purple"></div>
+    <div class="card1">
+      <div class="details">
+        <div class="data-name">
+          <p class="data"><?php print_r(utf8_encode($row['Data'])) ?></p>
+          <h5 class="article-name">
+           <?php print_r(utf8_encode($row['Titulo']))?>
+          </h5>
+        </div>
+        <div class="share">
+          <p class="type">Compartilhe <br> a publicação</p>
+          <div class="links">
+            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
+            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
+            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
+            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
           </div>
-        </details>
-        </li>
-        <!-- END -->
-      <?php
-        }
-      }else{ ?>
-      <li class="item">
-        <div class="nome">
-          <h3>Nenhum registro encontrado!</h3>
+        </div>
+        <div class="authors">
+          <p class="authors-names">Autores</p>
+          <ul class="list-authors">
+            <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
+            <li class="item-author-name">Guilherme Augusto G. Martins</li>
+          </ul>
         </div>
       </div>
-        <?php } ?>
-          </ul>
-        </section>
-  
-        <div class="pagination"> <!-- botões -->
-          <div class="prev"><</div>
-          <div class="numbers">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-          </div>
-          <div" class="next">></div>
+      <div class="panel">
+        <div class="resume">
+          <p class="resume-title">Resumo</p>
+          <p class="resume-text">
+            <?php print_r(utf8_encode($row['Resumo']))?>
+          </p>
         </div>
+        <p class="tags-title">Palavras-chave</p>
+        <div class="tags">
+          <ul class="list-tags">
+            <li class="item-tag">Cuidado</li>
+            <li class="item-tag">Saúde Mental</li>
+            <li class="item-tag">Saúde Pública</li>
+          </ul>
+        </div>
+      </div>
+      <button class="button-show-more">Ver mais</button>
+      <!-- fim -->
+    <?php
+      }
+    }
+    ?>
+        </ul>
       </section>
-    </main>
+
+      <div class="pagination"> <!-- botões -->
+        <div class="prev">
+          <span class="material-icons">
+            navigate_before
+          </span>
+        </div>
+        <div class="numbers">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div" class="next">
+          <span class="material-icons">
+            navigate_next
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
 
     
   <?php 
