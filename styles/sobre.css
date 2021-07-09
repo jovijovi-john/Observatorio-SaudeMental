@@ -36,18 +36,20 @@ main .container .card-integrantes {
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
+  text-align: center;
   width: 80%;
 }
 
 main .container .card-integrantes .card {
   align-items: center;
-  background: linear-gradient(180deg, #3e4095, #202046);
+  background: linear-gradient(180deg, #B6B6FF, #6C6C99);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  height: 400px;
   margin-right: 20px;
   padding: 10px;
-  width: fit-content;
+  width: 300px;
 }
 
 main .container .card-integrantes .card img {
@@ -68,6 +70,7 @@ main .container .card-integrantes .card .details .infos .name {
   color: #fff;
   font-size: 22px;
   font-weight: 500;
+  text-align: center;
   margin: 4px 0;
 }
 
@@ -75,6 +78,8 @@ main .container .card-integrantes .card .details .infos .occupation {
   color: #fff;
   font-size: 16px;
   margin: 4px 0;
+  text-align: center;
+  width: 200px;
 }
 
 main .container .card-integrantes .card .details .infos .local {
