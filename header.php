@@ -20,6 +20,11 @@
           </li>
           <li>
             <button>
+              <a href="./ListaNoticias.php">Notícias</a>
+            </button>
+          </li>
+          <li>
+            <button>
               <a href="./submeter_obra.php">Como submeter uma obra?</a>
             </button>
           </li>

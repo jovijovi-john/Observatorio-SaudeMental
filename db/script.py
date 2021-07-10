@@ -12,41 +12,34 @@ if con.is_connected():
     linha = cursor.fetchone()
     print("Conectado ao banco de dados ", linha)
 
-leitor = io.open("texto.txt", "r", encoding="utf8")
+leitor = io.open("Informacoes_Observatorio.txt", "r", encoding="utf8")
 
 listadelinhas = leitor.readlines()
 print(len(listadelinhas))
 
 i=0
 while (i<len(listadelinhas)):
-    titulo = listadelinhas[i]
+    titulo = listadelinhas[i].lstrip()
     i+=1
-    autor = listadelinhas[i]
+    autor = listadelinhas[i].lstrip()
     i+=1
-    data_pub = listadelinhas[i]
+    data_pub = listadelinhas[i].lstrip()
     i+=1
-    tipo = listadelinhas[i]
+    tipo = listadelinhas[i].lstrip()
     i+=1
-    palavras_chave = listadelinhas[i]
+    palavras_chave = listadelinhas[i].lstrip()
     i+=1
-    resumo = listadelinhas[i]
+    resumo = listadelinhas[i].lstrip()
     i+=1
-    link = listadelinhas[i]
+    link = listadelinhas[i].lstrip()
     i+=1
-    arquivo = listadelinhas[i]
+    arquivo = listadelinhas[i].lstrip()
     i+=1
     sql = "INSERT INTO trabalhos_publicados (Titulo, Autor, Data, Palavras_Chave, Tipo, Resumo, Arquivo, Link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)"
     val = (titulo, autor, data_pub, palavras_chave, tipo, resumo, arquivo, link)
     cursor.execute(sql,val)
     con.commit()
     print("Inserted", cursor.rowcount,"row(s) of data.")
-    #print('Título: %s' % (titulo))
-    #print('Autor: %s' % (autor))
-    #print('Data de Publicação: %s' % (data_pub))
-    #print('Tipo: %s' % (tipo))
-    #print('Palavras Chaves: %s' % (palavras_chave))
-    #print('Resumo: %s' % (resumo))
-    #print('Link: %s' % (link))
 
 if con.is_connected():
     cursor.close()

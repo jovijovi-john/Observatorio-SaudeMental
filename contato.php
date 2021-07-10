@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Observatório Saúde Mental</title>
+  
+  <link rel="icon" href="./assets/images/LogoObservatorio2.png">
   
   <link rel="stylesheet" href="./styles/contato.css">
   <link rel="stylesheet" href="./styles/styles.css">
@@ -39,11 +41,11 @@
     </section>
     <button type="submit">Enviar</button>
   </main>
-
   
   <?php
     include('footer.php');
   ?>
+  
   <script src="./scripts/script.js"></script>
 </body>
 </html>

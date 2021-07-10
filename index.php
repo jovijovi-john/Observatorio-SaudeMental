@@ -7,8 +7,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Observatório Saúde Mental</title>
   
+  <link rel="icon" href="./assets/images/LogoObservatorio2.png">
+
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/styles.css">
 
@@ -26,11 +28,12 @@
     <section id="slider">
       <ul class="slider-content">
         <li class="slider-item fade">
-          <div class="texto-banner">
+          <div class="texto-banner" style="background: url(./assets/images/photo-6.jpg); 
+          background-size: cover;">
             <div class="intro-noticia">
               <h3>Observatório Saúde Mental e Políticas sobre Drogas</h3>
               <p>Captação de obras na área de saúde mental e políticas sobre drogas no município de Sobral-CE</p>
-              <a href="./sobre.html">Conheça</a>
+              <a href="./sobre.php">Conheça</a>
             </div>
           </div>
         </li>
@@ -42,16 +45,16 @@
             $num_results = mysqli_num_rows($result);
 
             if($num_results > 0) {
-                for($i=0; $i<$num_results; $i++) {
+                for($i=0; $i<3; $i++) {
                     $row = mysqli_fetch_array($result);
         ?>
         <!-- INICIO -->
         <li class="slider-item fade">
-          <div class="texto-banner" style="background-image: url(./assets/noticias/<?php print_r(utf8_encode($row['Foto'])) ?>);">
+          <div class="texto-banner" style="background-image: url(./assets/noticias/<?php print_r(utf8_encode($row['Foto'])) ?>);background-size: cover;">
             <div class="intro-noticia">
               <h3><?php print_r(utf8_encode($row['Titulo'])) ?></h3>
               <p><?php print_r(utf8_encode($row['Descricao'])) ?> </p>
-              <a href="./sobre.html">Ver mais</a>
+              <a href="./ListaNoticias.php?Noticia=<?php print_r(utf8_encode($row['idNoticia'])) ?>">Ver mais</a>
             </div>
           </div>
         </li>
@@ -92,7 +95,7 @@
           <h1>Conheça o <mark class="highlight">Observatório</mark></h1>
           <p>O Observatório de Saúde Mental e Políticas sobre Drogas é uma iniciativa do Grupo de Estudo e Pesquisa Saúde Mental e Cuidado (GESAM), da Universidade Estadual Vale do Acaraú (UVA), em parceria com a Secretaria de Saúde de Sobral-CE, por meio da Coordenadoria de Políticas sobre Drogas. A nossa missão é o acompanhamento estratégico/científico destas temáticas; aperfeiçoamento e difusão de informações nessas áreas assim como fortalecimento do campo da atenção psicossocial. Ressalta-se ainda que sua criação e institucionalização acontece sem fins lucrativos.
           </p>
-          <a href="./sobre.html">Veja Mais ></a>
+          <a href="./sobre.php">Veja Mais ></a>
         </div>
       </div>
     </section>
