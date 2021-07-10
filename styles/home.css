@@ -381,19 +381,17 @@
   }
 
   .texto-banner {
-    background-image: url(../assets/images/photo-10.jpg);
-    background-repeat: no-repeat;
     height: auto;
     text-align: center;
     padding: 50px 0;
   }
 
-  .texto-banner h3 {
+  .texto-banner .intro-noticia h3 {
     font-size: 16px;
     width: 100%;
   }
 
-  .texto-banner p {
+  .texto-banner .intro-noticia p {
     font-size: 14px;
     margin-top: 6px;
     width: 80%;
