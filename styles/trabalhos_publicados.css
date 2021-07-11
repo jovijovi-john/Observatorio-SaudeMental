@@ -287,30 +287,15 @@
     padding: 0;
   }
 
-  details summary .nome{
-    display: flex;
+  .filtro {
     flex-direction: column;
-    font-size: 18px;
   }
 
-  details summary .nome span {
+  .publication input, .author input, .keyword input, .type select {
+    width: 100%;
+  }
+
+  .publication label, .author label, .keyword label, .type label, .search label {
     margin: 10px 0;
-    width: fit-content;
-  }
-
-  details summary .resumo {
-    font-size: 16px;
-  }
-
-  details .detalhes .btn-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px;
-    width: 100%;
-  }
-
-  details .detalhes .compartilhe {
-    margin-top: 10px;
-    width: 100%;
   }
 }
