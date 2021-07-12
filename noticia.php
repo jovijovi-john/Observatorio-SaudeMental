@@ -1,5 +1,11 @@
 <?php
-	require_once('conexao.php');
+	  require_once('conexao.php');
+    $parametro = $_GET['Noticia'];
+
+    if (!preg_match("/^\d+$/", $parametro)) {
+      header('location: ListaNoticias.php');
+    }
+
     mysqli_select_db($mysqli, $bd) or die("Could not select database");	
     $stmt = $mysqli->prepare('SELECT * FROM noticias WHERE idNoticia =  ?');
     $stmt->bind_param('i', $_GET['Noticia']);

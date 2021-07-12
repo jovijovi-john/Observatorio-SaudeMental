@@ -22,7 +22,7 @@
         </ul>
       </div>
       <div class="contato">
-        <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.html">Fale Conosco</a>
+        <img src="./assets/svg/comment icon.svg" alt=""><a href="./contato.php">Fale Conosco</a>
       </div>
     </div>
   </footer>
