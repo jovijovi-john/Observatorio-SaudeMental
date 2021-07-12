@@ -80,54 +80,59 @@
 
         <!-- inicio -->
       <li class="item">
-    <div class="line-purple"></div>
-    <div class="card1">
-      <div class="details">
-        <div class="data-name">
-          <p class="data"><?php print_r(utf8_encode($row['Data'])) ?></p>
-          <h5 class="article-name">
-           <?php print_r(utf8_encode($row['Titulo']))?>
-          </h5>
-        </div>
-        <div class="share">
-          <p class="type">Compartilhe <br> a publicação</p>
-          <div class="links">
-            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/twitter icon.svg" alt=""></a>
-            <a href=""><img src="./assets/svg/facebook icon.svg" alt=""></a>
+        <div class="line-purple"></div>
+        <div class="card1">
+          <div class="details">
+            <div class="data-name">
+              <p class="data"><?php print_r(utf8_encode($row['Data'])) ?></p>
+              <h5 class="article-name">
+              <?php print_r(utf8_encode($row['Titulo']))?>
+              </h5>
+            </div>
+            <div class="share">
+              <p class="type">Compartilhe <br> a publicação</p>
+              <div class="links">
+                <a href=""><img src="./assets/svg/facebook icon copy.svg" alt=""></a>
+                <a href=""><img src="./assets/svg/instagram icon copy.svg" alt=""></a>
+                <a href=""><img src="./assets/svg/twitter icon copy.svg" alt=""></a>
+              </div>
+            </div>
+            <div class="authors">
+              <p class="authors-names">Autores</p>
+              <ul class="list-authors">
+                <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
+                <li class="item-author-name">Guilherme Augusto G. Martins</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="authors">
-          <p class="authors-names">Autores</p>
-          <ul class="list-authors">
-            <li class="item-author-name">Guilherme Barroso Langoni de Freitas</li>
-            <li class="item-author-name">Guilherme Augusto G. Martins</li>
-          </ul>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="resume">
-          <p class="resume-title">Resumo</p>
-          <p class="resume-text">
-            <?php print_r(utf8_encode($row['Resumo']))?>
-          </p>
-        </div>
-        <p class="tags-title">Palavras-chave</p>
-        <div class="tags">
-          <ul class="list-tags">
-            <li class="item-tag">Cuidado</li>
-            <li class="item-tag">Saúde Mental</li>
-            <li class="item-tag">Saúde Pública</li>
-          </ul>
-        </div>	
-      </div>
-      <button class="button-show-more">Ver mais</button>
-      <!-- fim -->
-    <?php
-      }
-    }
-    ?>
+          <div class="panel">
+            <div class="resume">
+              <p class="resume-title">Resumo</p>
+              <p class="resume-text">
+                <?php print_r(utf8_encode($row['Resumo']))?>
+              </p>
+            </div>
+            <p class="tags-title">Palavras-chave</p>
+            <div class="tags">
+              <ul class="list-tags">
+                <li class="item-tag">Cuidado</li>
+                <li class="item-tag">Saúde Mental</li>
+                <li class="item-tag">Saúde Pública</li>
+              </ul>
+            </div>	
+          </div>
+          <button class="button-show-more">Ver mais</button>
+          <!-- fim -->
+        <?php
+          }
+          echo "<div><h1> aqui</h1></div>";
+        }
+        else {
+          ?><div>
+            <h1>Nada encontrado</h1>
+          </div> <?php 
+        }
+        ?>
         </ul>
       </section>
 
