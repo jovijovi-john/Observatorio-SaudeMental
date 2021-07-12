@@ -23,9 +23,7 @@
   
   <?php 
     include('header.php');
-  ?>
 
-  <?php 
       if(!isset($_GET['Noticia'])){
         include('noticias.php');
       }else{
