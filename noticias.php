@@ -1,5 +1,8 @@
+ <?php
+    require_once('conexao.php');
+?>
 <section class="container">
-    <div class="section-header"> <!-- para mudar a cor é so acessar essa classe em style.css -->
+    <div class="section-header">
       <h2>Notícias</h2>
     </div>
     <div class="line-purple"></div>
@@ -28,6 +31,6 @@
     </div>
     <?php 
       }
-    }
+    }	
     ?>
     <!-- FIM -->
