@@ -40,7 +40,7 @@
           <?php
             mysqli_select_db($mysqli, $bd) or die("Could not select database");
 
-            $query = "SELECT * FROM noticias";
+            $query = "SELECT * FROM noticias ORDER BY `idNoticia` desc LIMIT 3";
             $result = mysqli_query($mysqli, $query);
             $num_results = mysqli_num_rows($result);
 
