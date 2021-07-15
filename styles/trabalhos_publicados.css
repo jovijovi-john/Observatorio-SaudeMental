@@ -167,11 +167,13 @@ main .container .card .panel .tags .list-tags .item-tag {
 }
 
 main .container .card button {
+  align-items: center;
   background: none;
   border: 1px solid #3E4095;
   border-radius: 25px;
   color: #3E4095;
   cursor: pointer;
+  display: flex;
   font-size: 16px;
   font-weight: 500;
   margin: 10px auto;

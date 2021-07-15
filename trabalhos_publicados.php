@@ -120,7 +120,12 @@
             </ul>
           </div>	
         </div>
-        <button class="button-show-more">Ver mais</button>
+        <button class="button-show-more">
+          Ver mais
+          <span class="material-icons">
+            add
+          </span>
+        </button>
         <div class="line-gray"></div>
         <!-- fim -->
       <?php

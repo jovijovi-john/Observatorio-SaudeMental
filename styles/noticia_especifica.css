@@ -45,11 +45,13 @@ main .container .texto-noticia p {
 }
 
 main .container .button-back {
+  align-items: center;
   background: none;
   border: 1px solid #3E4095;
   border-radius: 25px;
   color: #3E4095;
   cursor: pointer;
+  display: flex;
   float: right;
   font-size: 16px;
   font-weight: 500;
@@ -64,4 +66,9 @@ main .container .button-back {
 main .container .button-back:hover,
 main .container .button-back:focus {
   opacity: .6;
+}
+
+main .container .button-back span {
+  font-size: 20px;
+  margin-right: 2px;
 }
