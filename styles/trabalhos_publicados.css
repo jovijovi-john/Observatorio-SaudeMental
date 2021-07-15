@@ -1,254 +1,191 @@
-* {
-  /* background: #000; */
-  box-sizing: border-box;
-  /* color: #fafafa; */
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', Arial;
-}
 
-.container {
+main .container {
   margin: 40px auto;
   width: 80%;
 }
 
-.filtro {
-  display: flex;
-  justify-content: space-between;
-}
-
-.publication, .author, .keyword, .type {
+main .container .filtro {
   display: flex;
   flex-direction: column;
 }
 
-.publication label, .author label, .keyword label, .type label, .search label {
+main .container .filtro .publication,
+main .container .filtro .author,
+main .container .filtro .keyword,
+main .container .filtro .type {
+  display: flex;
+  flex-direction: column;
+}
+
+main .container .filtro .publication label,
+main .container .filtro .author label,
+main .container .filtro .keyword label,
+main .container .filtro .type label,
+main .container .search label {
   font-size: calc((12px + .25vw) * .875);
   font-weight: 700;
   letter-spacing: 4px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
-.publication input, .author input, .keyword input, .type select {
+main .container .filtro .publication input,
+main .container .filtro .author input,
+main .container .filtro .keyword input,
+main .container .filtro .type select {
+  background: none;
   border: 1px solid #c3c3c3;
   border-radius: 6px;
   font-size: 16px;
+  font-style: italic;
   padding: 14px;
   outline: none;
-  width: 90%;
+  width: 100%;
 }
 
-.publication input, .author input, .keyword input {
-  font-style: italic;
+main .container .filtro .type select {
+  background: none;
+  color: #707070;
 }
 
-.container .search {
+main .container .search {
   display: flex;
   flex-direction: column;
 }
 
-.container .search-button {
+main .container .search-button {
   background: none;
   border: 1px solid #c3c3c3;
   border-radius: 50px;
+  cursor: pointer;
   height: 50px;
   margin: auto 0;
   padding: 12px;
+  transition: .2s ease-in-out;
   width: 50px;
 }
 
-.card1 .details {
+main .container .search-button:hover,
+main .container .search-button:focus {
+  opacity: .6;
+}
+
+main .container .list,
+main .container .list-authors,
+main .container .list-tags {
+  list-style: none;
+}
+
+main .container .list .item {
+  padding: 4px;
+}
+
+main .container .card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
   width: 100%;
 }
 
-.card1 .details .data-name {
-  width: 40%;
+main .container .card .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.card1 .details .data-name p {
+main .container .card .details .data-name {
+  width: 600px;
+}
+
+main .container .card .details .data-name,
+main .container .card .details .share,
+main .container .card .details .authors,
+main .container .card .details .resume {
+  display: flex;
+  flex-direction: column;
+}
+
+main .container .card .panel .tags .list-tags{
+  display: flex;
+  flex-direction: row;
+}
+
+main .container .card .panel .resume {
+  margin: 20px 0;
+}
+
+main .container .card .details .data-name p,
+main .container .card .details .share p,
+main .container .card .details .authors p,
+main .container .card .panel .resume .resume-title,
+main .container .card .panel .tags-title {
   font-size: calc((12px + .25vw) * .875);
   font-weight: 700;
   letter-spacing: 4px;
+  margin: 6px 0;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-.card1 .details .data-name .article-name {
+main .container .card .details .data-name .article-name {
   font-size: 22px;
   font-weight: 500;
 }
 
-.card1 .details .share {
-  width: 15%;
-}
-
-.card1 .details .share p {
-  font-size: calc((12px + .25vw) * .875);
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.card1 .details .share .links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.card1 .details .share .links a img {
-  width: 20px;
-}
-
-.card1 .details .authors {
-  width: 25%;
-}
-
-.card1 .details .authors p {
-  font-size: calc((12px + .25vw) * .875);
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.card1 .details .authors .list-authors {
-  list-style: none;
-}
-
-.card1 .details .authors .item-author-name {
-  font-weight: 300;
-  margin-bottom: 4px;
-}
-
-.card1 .panel {
-  display: none;
-  margin: 20px 0;
-}
-
-.card1 .resume .resume-title {
-  font-size: calc((12px + .25vw) * .875);
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.card1 .resume .resume-text {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.card1 { 
-  margin-top: 20px;
-}
-
-.card1 .tags-title {
-  font-size: calc((12px + .25vw) * .875);
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.card1 .tags {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.card1 .tags .list-tags {
-  display: flex;
-  list-style: none;
-}
-
-.card1 .tags .item-tag {
-  border: 1px solid #aeaec9;
-  border-radius: 25px;
-  /* color: #3E4095; */
-  font-size: calc((16px + .25vw) * .875);
-  height: fit-content;
-  margin-right: 20px;
-  padding: 10px;
-  width: fit-content;
-}
-
-.card1 .tags .download-btn {
-  background: none;
-  border: 1px solid #3E4095;
-  border-radius: 25px;
-  color: #3E4095;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 15px;
-  transition: .1s ease-out;
-}
-
-.card1 button {
-  background: none;
-  border: 1px solid #3E4095;
-  border-radius: 25px;
-  color: #3E4095;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 10px 0;
-  margin-right: 10px;
-  text-decoration: none;
-  padding: 15px;
-  transition: .1s ease-out;
-}
-
-.card1 button {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-}
-
-.card1 button img {
+main .container .card .details .share a img {
   height: 20px;
   width: 20px;
 }
 
-.card1 .download-btn:hover, .card1 button:hover {
-  background: #3E4095;
-  color: #fff;
+main .container .card .authors .list-authors .item-author-name,
+main .container .card .panel .resume .resume-text,
+main .container .card .panel .tags .list-tags .item-tag {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
-.line-purple {
-  background: #3E4095;
-  height: 1px;
-  margin: 30px 0;
-  width: 100%;
+main .container .card .panel .tags .list-tags .item-tag {
+  border: 1px solid #3E4095;
+  border-radius: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  width: fit-content;
 }
 
-.line-gray {
-  background: #c6c6c6;
-  height: 1px;
-  margin: 30px 0;
-  width: 100%;
+main .container .card button {
+  background: none;
+  border: 1px solid #3E4095;
+  border-radius: 25px;
+  color: #3E4095;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px auto;
+  margin-left: 0;
+  text-decoration: none;
+  padding: 12px;
+  transition: .1s ease-out;
+  width: fit-content;
 }
 
-.pagination {
+main .container .pagination {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.pagination .numbers {
+main .container .pagination .numbers {
   display: flex;
 }
 
-.pagination .numbers div, .pagination .prev, .pagination .next {
+main .container .pagination .numbers div, main .container .pagination .prev, main .container .pagination .next {
   align-items: center;
-  background: none;
+  background: #3D3D79;
   border: 1px solid #3D3D79;
   border-radius: 50%;
-  color: #3D3D79;
+  color: #fff;
   cursor: pointer;
   display: flex;
   height: 25px;
@@ -258,44 +195,211 @@
   width: 25px;
 }
 
-.pagination .numbers div:hover, .pagination .prev:hover, .pagination .next:hover {
+main .container .pagination .prev:hover , main .container .pagination .next:hover {
   background: #fff;
   color: #3D3D79;
 }
 
-.pagination .numbers .active {
+main .container .pagination .numbers .active {
+  background: #fff;
+  color: #3D3D79;
+}
+
+main .container .pagination .numbers .active:hover {
   background: #3D3D79;
   color: #fff;
 }
-@media (max-width: 800px) {
-  .container {
+
+.line-purple {
+  background: #3E4095;
+}
+
+.line-gray {
+  background: #c6c6c6;
+}
+
+.line-purple, .line-gray {
+  height: 1px;
+  margin: 10px 0;
+  width: 100%
+}
+
+@media screen and (max-width: 800px) {
+
+  main .container {
+    margin: 0 auto;
     width: 90%;
   }
 
-  .container details summary .header input {
-    width: 65%;
-  }
-
-  .container details summary .header .btn-pesquisas {
+  main .container .filtro {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 30%;
-  }
-
-  .container .paginate .list .item { 
-    padding: 0;
-  }
-
-  .filtro {
     flex-direction: column;
   }
 
-  .publication input, .author input, .keyword input, .type select {
+  main .container .filtro .publication,
+  main .container .filtro .author,
+  main .container .filtro .keyword,
+  main .container .filtro .type {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .filtro .publication label,
+  main .container .filtro .author label,
+  main .container .filtro .keyword label,
+  main .container .filtro .type label,
+  main .container .search label {
+    font-size: calc((12px + .25vw) * .875);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+
+  main .container .filtro .publication input,
+  main .container .filtro .author input,
+  main .container .filtro .keyword input,
+  main .container .filtro .type select {
+    background: none;
+    border: 1px solid #c3c3c3;
+    border-radius: 6px;
+    font-size: 16px;
+    font-style: italic;
+    padding: 14px;
+    outline: none;
     width: 100%;
   }
 
-  .publication label, .author label, .keyword label, .type label, .search label {
-    margin: 10px 0;
+  main .container .filtro .type select {
+    background: none;
+    color: #707070;
+  }
+
+  main .container .search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .search-button {
+    background: none;
+    border: 1px solid #c3c3c3;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 50px;
+    margin: auto 0;
+    padding: 12px;
+    transition: .2s ease-in-out;
+    width: 50px;
+  }
+
+  main .container .search-button:hover,
+  main .container .search-button:focus {
+    opacity: .6;
+  }
+
+  main .container .list,
+  main .container .list-authors,
+  main .container .list-tags {
+    list-style: none;
+  }
+
+  main .container .list .item {
+    padding: 4px;
+  }
+
+  main .container .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  main .container .card .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .card .details .data-name,
+  main .container .card .details .share,
+  main .container .card .details .authors,
+  main .container .card .details .resume,
+  main .container .card .details .tags {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .card .details .data-name p,
+  main .container .card .details .share p,
+  main .container .card .details .authors p,
+  main .container .card .panel .resume .resume-title,
+  main .container .card .panel .tags-title {
+    font-size: calc((12px + .25vw) * .875);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 6px 0;
+    text-transform: uppercase;
+  }
+
+  main .container .card .details .share a img {
+    height: 20px;
+    width: 20px;
+  }
+
+  main .container .card .authors .list-authors .item-author-name,
+  main .container .card .panel .resume .resume-text,
+  main .container .card .panel .tags .list-tags .item-tag {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  main .container .card button {
+    background: none;
+    border: 1px solid #3E4095;
+    border-radius: 25px;
+    color: #3E4095;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px auto;
+    margin-left: 0;
+    text-decoration: none;
+    padding: 5px;
+    transition: .1s ease-out;
+    width: 60%;
+  }
+
+  main .container .pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  main .container .pagination .numbers {
+    display: flex;
+  }
+
+  main .container .pagination .numbers div, main .container .pagination .prev, main .container .pagination .next {
+    align-items: center;
+    background: #3D3D79;
+    border: 1px solid #3D3D79;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    margin: 0 4px;
+    padding: 8px;
+    width: 25px;
+  }
+
+  main .container .pagination .prev:hover , main .container .pagination .next:hover {
+    background: #fff;
+    color: #3D3D79;
+  }
+
+  main .container .pagination .numbers .active {
+    background: #fff;
+    color: #3D3D79;
   }
 }
