@@ -37,9 +37,31 @@ main .container .texto-noticia h1 {
 }
 
 main .container .texto-noticia p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 2px;
   margin-top: 10px;
   text-align: justify;
+}
+
+main .container .button-back {
+  background: none;
+  border: 1px solid #3E4095;
+  border-radius: 25px;
+  color: #3E4095;
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px auto;
+  margin-left: 0;
+  text-decoration: none;
+  padding: 12px;
+  transition: .1s ease-out;
+  width: fit-content;
+}
+
+main .container .button-back:hover,
+main .container .button-back:focus {
+  opacity: .6;
 }

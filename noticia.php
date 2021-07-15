@@ -51,6 +51,7 @@
         <h1><?php print_r(utf8_encode($Titulo)) ?></h1>
         <p><?php print_r(utf8_encode($Texto)) ?> </p>
       </div>
+      <button class="button-back">Voltar</button>
     </section>
   </main>
 
