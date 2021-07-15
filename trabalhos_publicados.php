@@ -59,7 +59,11 @@
       </div>
       <div class="search">
         <label for="search-button">Buscar</label>
-        <button name="search-button" class="search-button"><img src="./assets/svg/search.svg" alt=""></button>
+        <button name="search-button" class="search-button">
+          <span class="material-icons">
+            search
+          </span>
+        </button>
       </div>
     </form>
       <!-- START  -->

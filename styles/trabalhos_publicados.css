@@ -184,6 +184,16 @@ main .container .card button {
   width: fit-content;
 }
 
+main .container .card button:hover {
+  background: #3E4095;
+  color: #fff;
+}
+
+main .container .card button span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
 main .container .pagination {
   align-items: center;
   display: flex;
