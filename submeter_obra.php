@@ -20,7 +20,7 @@
         include('header.php');
     ?>
 
-    <main>
+    <main class="fade">
         <div  class="section-header"> <!-- para mudar a cor é so acessar essa classe em style.css -->
         <h2>Como submeter uma Obra?</h2>
         </div>

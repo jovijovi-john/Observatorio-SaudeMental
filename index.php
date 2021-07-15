@@ -23,7 +23,7 @@
     include('header.php');
   ?>
 
-  <main>
+  <main class="fade">
 
     <section id="slider">
       <ul class="slider-content">

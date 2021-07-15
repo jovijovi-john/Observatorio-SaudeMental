@@ -20,7 +20,7 @@
     include('header.php');
   ?>
 
-  <main>
+  <main class="fade">
     <section id="envio-mensagem">
       <div class="section-header">
         <h2>contato</h2>

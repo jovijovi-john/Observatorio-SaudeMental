@@ -52,7 +52,7 @@
     include('header.php');
   ?>
 
-<main>
+<main class="fade">
     <div class="section-header"> <!-- para mudar a cor é so acessar essa clase em style.css -->
       <h2>Trabalhos Publicados</h2>
     </div>

@@ -42,7 +42,7 @@
 
 ?>
 
-  <main>
+  <main class="fade">
     <section class="container">
       <div class="image">
         <img src="./assets/noticias/<?php print_r($Foto) ?>" alt="">

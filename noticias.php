@@ -1,7 +1,7 @@
  <?php
     require_once('conexao.php');
 ?>
-<section class="container">
+<section class="container fade">
     <div class="section-header">
       <h2>Notícias</h2>
     </div>

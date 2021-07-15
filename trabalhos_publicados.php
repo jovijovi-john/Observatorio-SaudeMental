@@ -81,7 +81,7 @@
 
         <!-- inicio -->
       <li class="item">
-      <div class="card1">
+      <div class="card">
         <div class="details">
           <div class="data-name">
             <p class="data"><?php print_r(utf8_encode($row['Data'])) ?></p>
