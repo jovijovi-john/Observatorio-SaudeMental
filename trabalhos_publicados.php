@@ -106,7 +106,7 @@
             </ul>
           </div>
         </div>
-        <div class="panel">
+        <div class="panel fade">
           <div class="resume">
             <p class="resume-title">Resumo</p>
             <p class="resume-text">

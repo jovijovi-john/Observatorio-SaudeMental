@@ -15,10 +15,10 @@ for (var i=0; i<button.length; i++) {
     var panel = this.previousElementSibling
     if (panel.style.display === 'none' || panel.style.display === "") {
       panel.style.display = 'block'
-      console.log(button)
-	  
+      this.innerHTML = "Ocultar"
     } else {
       panel.style.display = 'none'
+      this.innerHTML = "Ver mais"
     }
   })
 }
