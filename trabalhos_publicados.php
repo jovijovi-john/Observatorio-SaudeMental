@@ -29,18 +29,19 @@
     </div>
     
     <section class="container">
+    	<h2>Buscar por: </h2>
     <form action="busca.php" class="filtro" method="GET">
       <div class="publication">
-        <label for="publication">Publicação</label>
-        <input name="publication" type="text" placeholder="Saúde Mental...">
+        <label for="publication">Título:</label>
+        <input name="publication" type="text" placeholder="Título do Trabalho">
       </div>
       <div class="author">
         <label for="author">Autor</label>
-        <input name="author" type="text" placeholder="Guilherme...">
+        <input name="author" type="text" placeholder="Autor">
       </div>
       <div class="keyword">
         <label for="keyword">Palavra-chave</label>
-        <input name="keyword" type="text" placeholder="cuidado...">
+        <input name="keyword" type="text" placeholder="Palavra-chave">
       </div>
       <div class="type">
         <label for="type">Tipo</label>
