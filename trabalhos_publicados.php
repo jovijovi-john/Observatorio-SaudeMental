@@ -46,7 +46,7 @@
       <div class="type">
         <label for="type">Tipo</label>
         <select name="type" id="Artigo">
-          <option value="Tipo" disabled>Tipo</option>
+          <option value="Tipo" selected disabled>Tipo</option>
           <option value="Artigo">Artigo</option>
           <option value="TCC Graduação">TCC Graduação</option>
           <option value="TCC Especialização">TCC Especialização</option>
