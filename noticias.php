@@ -33,4 +33,7 @@
       }
     }	
     ?>
+    <div class="line-gray"></div>
+</section>
+
     <!-- FIM -->

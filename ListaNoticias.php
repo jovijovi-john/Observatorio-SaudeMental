@@ -28,8 +28,7 @@
 
   ?>
     
-    <div class="line-gray"></div>
-  </section>
+    
   
   <?php 
     include('footer.php');

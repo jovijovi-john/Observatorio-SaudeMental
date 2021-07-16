@@ -1,4 +1,3 @@
-
 main .container {
   margin: 40px auto;
   width: 80%;
@@ -92,10 +91,12 @@ main .container .card .details {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 main .container .card .details .data-name {
   max-width: 600px;
+  width: 40%;
 }
 
 main .container .card .details .share {
