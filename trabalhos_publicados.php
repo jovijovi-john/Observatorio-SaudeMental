@@ -32,16 +32,16 @@
     	<h2>Buscar por: </h2>
     <form action="busca.php" class="filtro" method="GET">
       <div class="publication">
-        <label for="publication">Título:</label>
-        <input name="publication" type="text" placeholder="Título do Trabalho">
+        <label for="publication">Título</label>
+        <input name="publication" type="text" placeholder="Digite o título">
       </div>
       <div class="author">
         <label for="author">Autor</label>
-        <input name="author" type="text" placeholder="Autor">
+        <input name="author" type="text" placeholder="Digite o nome do autor">
       </div>
       <div class="keyword">
         <label for="keyword">Palavra-chave</label>
-        <input name="keyword" type="text" placeholder="Palavra-chave">
+        <input name="keyword" type="text" placeholder="Digite uma palavra chave">
       </div>
       <div class="type">
         <label for="type">Tipo</label>

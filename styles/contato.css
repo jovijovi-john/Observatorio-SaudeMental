@@ -2,21 +2,22 @@
   font-size: 18px;
 }
 
-.mensagem {
-  display: flex;
-  flex-direction: column;
-  padding: 100px;
-  padding-top: 0;
+main .mensagem {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 80%;
 }
 
-.mensagem input {
-  border: none;
-  border-bottom: 1px solid #000;
+main .mensagem input {
+  border: 1px solid #3E4095;
+  border-radius: 10px;
+  font-style: italic;
   margin-top: 20px;
   outline: none;
+  padding: 10px;
 }
 
-.mensagem .nome {
+main .mensagem .nome {
   width: 100%;
 }
 
@@ -32,36 +33,33 @@
 
 .mensagem .input-mensagem {
   border: none;
-  border: 1px solid #000;
+  border: 1px solid #3E4095;
   height: 500px;
   padding: 20px;
   width: 100%;
 }
 
-
-
-
-
-/* #3D3D79 #3E4095 #B9B9D8 */
-
 main button {
-  background: #3E4095;
-  border: none;
-  color: #fff;
+  background: #fff;
+  border: 1px solid #3E4095;
+  border-radius: 50px;
+  color: #3E4095;
   cursor: pointer;
   display: block;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
+  transition: .2s ease-out;
   width: 100px;
 }
 
 main button:hover {
-  opacity: .8;
+  background: #3E4095;
+  color: #fff;
 }
 
 @media (max-width: 800px) {
-  .mensagem {
-    padding: 20px;
+  main .mensagem input {
+    font-size: 12px;
   }
 }
