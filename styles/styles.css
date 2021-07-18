@@ -138,49 +138,55 @@ mark:hover:after {
 
 /* FOOTER */
 
+
 footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  margin-top: 0;
+  padding: 3.125rem 1.25rem;
   background: #545457;
-  width: 100%;
 }
 
-footer .container {
+footer .logos-footer{
+  display:flex;
   align-items: center;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 0 auto;
-  padding: 20px;
-  width: 90%;
+  justify-content: center;
 }
 
-footer .container .logos {
-  align-items: center;
-  display: flex;
-  margin: 0;
-  width: 30%;
-}
 
-footer .container .logos a {
+footer .logos-footer a {
   margin-right: 20px;
   width: 100px;
 }
 
-footer .container .logos a img {
-  width: 100%;
+footer .logos-footer .logo-observatorio img{
+  width: 100px;
 }
 
-footer .container .logos .logos-secundarias {
+
+footer .logos-footer a img {
+  width: 100px;
+}
+
+footer .logos-footer .logos-secundarias {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 200px;
-}
-
-footer .container .logos .logos-secundarias img {
-  width: 100%;
 }
 
 footer .infos {
-  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+
+footer h4{
+  background-color: #3D3D79;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 footer .infos ul {
@@ -189,7 +195,6 @@ footer .infos ul {
 
 footer .infos li {
   display: flex;
-  margin: 14px 0;
   padding: 12px;
 }
 
@@ -210,7 +215,6 @@ footer .infos a, footer .infos p {
 
 footer .infos .btn-contato {
   align-items: center;
-  background: #6FA9FF;
   border-radius: 6px;
 }
 
@@ -218,22 +222,29 @@ footer .infos a {
   text-decoration: none;
 }
 
-footer .sociais {
-  width: 10%;
+footer .contatos {
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
-footer .sociais ul {
+footer .contatos .contato{
+  align-self: flex-start;
+}
+
+footer .contatos ul {
   list-style: none;
 }
 
-footer .sociais li {
+footer .contatos li {
   align-items: center;
   display: flex;
   padding: 12px;
   width: 300px;
 }
 
-footer .sociais li a {
+footer .contatos li a {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -243,20 +254,19 @@ footer .sociais li a {
   width: 140px;
 }
 
-footer .sociais img {
+footer .contatos img {
   margin: 0;
   width: 25px;
 }
 
-footer .sociais a, footer .sociais p {
+footer .contatos a, footer .contatos p {
   color: #fff;
   margin-left: 20px;
 }
 
-footer .sociais .btn-contato {
+footer .contatos .btn-contato {
   align-items: center;
   display: flex;
-  background: #6FA9FF;
   border-radius: 6px;
 }
 
@@ -265,11 +275,12 @@ footer .infos a {
 }
 
 footer .contato {
-  background: #6FA9FF;
+  background: #3D3D79;;
   border-radius: 6px;
   box-shadow: 0px 6px 10px 0px #252629;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px;
   width: 175px;
 }
@@ -395,23 +406,13 @@ footer .contato a {
     padding: 40px 0;
   }
 
-  footer .container {
-    width: 100%;
-  }
-  footer .container {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  footer .container .logos {
-    flex-direction: column;
+  
+  footer .container-logos-footer{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 10px;
     width: 100%;
-  }
-
-  footer .container .logos a {
-    margin: 0;
+    height: 100%;
   }
 
   footer .infos {
@@ -425,11 +426,11 @@ footer .contato a {
     width: fit-content;
   }
 
-  footer .sociais {
+  footer .contatos {
     width: 100%;
   }
   
-  footer .sociais li {
+  footer .contatos li {
     align-items: center;
     display: flex;
     margin: 0;
@@ -437,7 +438,7 @@ footer .contato a {
     width: fit-content;
   }
 
-  footer .sociais li a {
+  footer .contatos li a {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -446,5 +447,60 @@ footer .contato a {
     padding: 12px;
     text-decoration: none;
     width: 140px;
+  }
+}
+
+@media (min-width: 1051px ){
+  
+.container-fale-conosco {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+}
+
+@media (max-width: 1050px){
+    
+  footer {
+      display: block;
+      padding: 2rem 8rem;
+  }
+
+  footer .projetos-footer {
+      display: block;
+  }
+
+  footer h4{
+      color: #919496;
+      text-align: start;
+      width: 100%;
+      background: none;
+      padding-top: 1rem;
+      text-indent: 2px;
+      margin-top: 1rem;
+      border-bottom: 1px solid #919496;
+  }
+
+  footer .container-logos-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  footer .logos-footer {
+    margin-bottom: 20px;
+  }
+
+  footer .contatos, footer .infos {
+    align-items: flex-start;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  footer {
+    padding: 2rem;
   }
 }
