@@ -1,29 +1,63 @@
 <?php
+require './scripts.php/Exception.php';
+require './scripts.php/PHPMailer.php';
+require './scripts.php/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 if (!isset($_POST['nome']) or !isset($_POST['email']) or !isset($_POST['mensagem'])) {
-	echo "Pacote não Permite";
+	echo "Pacote não Permitido";
 }else{
+
+	/*
+	email:contatoteste@observatoriodesaudemental.com.br
+	senha: $Teste$Contato$22
+
+	*/
+
+	
+
+	function email($para_email, $para_nome,$assunto, $body){
+	$mail = new PHPMailer(true);
+	try {
+    //Server settings
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'mail.observatoriodesaudemental.com.br';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'contatoteste@observatoriodesaudemental.com.br';                     //SMTP username
+    $mail->Password   = '$Teste$Contato$22';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //Recipients
+    $mail->setFrom('contatoteste@observatoriodesaudemental.com.br', 'Observatorio de Saude Mental');
+    $mail->addAddress($para_email, $para_nome);     //Add a recipient
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = $assunto;
+    $mail->Body    = $body;
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+	}//Function
+
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
-	$telefone = $_POST['phone'];
 	$mensagem = $_POST['mensagem'];
-
-	$arquivo ="Nome: $nome;Email: $email; Telefone: $telefone; Mensagem= $mensagem";
-	//Email para quem será enviado
-	$emailEnviar = "matheus.levy@discente.ufma.br"; // Email que vai receber os dados
-	$destino = $emailEnviar;
-	$assunto = 'Contato pelo Site';
-	//Header
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: $nome <$email>';
-
-	$enviaremail = mail($destino, $assunto, $arquivo, $headers);
-	if($enviaremail){
-		$mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecedio";
+	$telefone = $_POST['phone'];
+	$corpo_email = "<h1>Nome: $nome</h1> <p>Email: $email</p> <p>Mensagem: $mensagem</p><p>Telefone: $telefone</p>";
+	$controle = email("petcomputacao.ufma@gmail.com", "Observatorio de Saude Mental", "Contato", $corpo_email);
+	if($controle == 1){
+		echo "Envio ok";
 	}else{
-		$mgm = "ERRO AO ENVIAR EMAIL!";
-		echo "";
+		echo $controle;
 	}
-}
-
+	}//Else
 ?>

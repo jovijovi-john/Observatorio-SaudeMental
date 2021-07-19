@@ -25,14 +25,14 @@
       <div class="section-header">
         <h2>contato</h2>
       </div>
-
+      <form action="./email.php" method="post">
       <div class="mensagem">
         <div class="nome">
-          <input type="name" name="nome" id="" placeholder="Nome:*" class="nome">
+           <input type="text" name="nome" required="required" id="nome" placeholder="Nome:*" class="nome">
         </div>
         <div class="telefone-email">
-          <input type="email" name="email" id="" placeholder="Email:*" class="email">
-          <input type="phone" name="telefone" id="" placeholder="Telefone:*" class="telefone">
+          <input type="email" name="email" required="required" id="nome" placeholder="Email:*" class="email">	
+          <input type="tel"   name="phone" id="phone" placeholder="Telefone: " class="telefone">
         </div>
         <div class="texto-mensagem">
           <input type="text" name="mensagem" id="" placeholder="Mensagem" class="input-mensagem">
@@ -40,6 +40,7 @@
       </div>
     </section>
     <button type="submit">Enviar</button>
+    </form>
   </main>
   
   <?php
@@ -47,5 +48,10 @@
   ?>
   
   <script src="./scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $("#phone").mask("(00) 0000-00009");
+  </script>
 </body>
 </html>

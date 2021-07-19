@@ -1,16 +1,16 @@
 <?php
 	require_once('conexao.php');
     if(!isset($_GET['Noticia'])){
-        /*
+        
         //No servidor usar essa:
     	$URL="http://observatoriodesaudemental.com.br/v2/Observatorio-SaudeMental/ListaNoticias.php";
         echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
         echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
         die();
-        */
+        
         //No localhost usar essa:
-        header('Location: ListaNoticias.php');
-        die();
+        //header('Location: ListaNoticias.php');
+        //die();
     }else{
 
     $parametro = $_GET['Noticia'];
@@ -19,15 +19,15 @@
         	if(!is_numeric($parametro[$i])){
         	    
                 //No servidor usar essa:
-                /*
+                
         	    $URL="http://observatoriodesaudemental.com.br/v2/Observatorio-SaudeMental/ListaNoticias.php";
                 echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
                 echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">'; 
                 die();
-                */
+                
                 //No localhost usar essa:
-                header('Location: ListaNoticias.php');
-                die();  
+                //header('Location: ListaNoticias.php');
+                //die();  
     	    }  
         }
 
