@@ -42,7 +42,7 @@
         </div>
       </div>
     </section>
-    <button type="submit">Enviar</button>
+    <button type="submit">Enviar </button>
     </form>
   </main>
   
