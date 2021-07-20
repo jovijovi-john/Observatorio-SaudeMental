@@ -28,8 +28,8 @@
     <section id="slider">
       <ul class="slider-content">
         <li class="slider-item fade">
-          <div class="texto-banner" style="background: url(./assets/images/photo-6.jpg); 
-          background-size: cover;">
+          <div class="texto-banner" style="background: url(./assets/images/photo-10.jpg); 
+          background-size: cover">
             <div class="intro-noticia">
               <h3>Observatório Saúde Mental e Políticas sobre Drogas</h3>
               <p>Captação de obras na área de saúde mental e políticas sobre drogas no município de Sobral-CE</p>
@@ -50,7 +50,7 @@
         ?>
         <!-- INICIO -->
         <li class="slider-item fade">
-          <div class="texto-banner" style="background-image: url(./assets/photo-10.jpg);background-size: cover;">
+          <div class="texto-banner" style="background-image: url(./assets/noticias/<?php print_r(utf8_encode($row['Foto'])) ?>);background-size: cover;">
             <div class="intro-noticia">
               <h3><?php print_r(utf8_encode($row['Titulo'])) ?></h3>
               <p><?php print_r(utf8_encode($row['Descricao'])) ?> </p>
